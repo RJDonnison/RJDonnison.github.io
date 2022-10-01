@@ -281,6 +281,17 @@ nav > a[data-status="active"] {
 
 /**Projects page*/
 /*#region*/
+.display {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  width: 40%;
+  aspect-ratio: 16/9;
+  transform: translate(0, -50%);
+  border-radius: 10px;
+}
+
 .text {
   position: absolute;
   top: 50%;
@@ -296,5 +307,34 @@ nav > a[data-status="active"] {
 
 .text > p {
   padding: 5%;
+}
+
+.languages {
+  position: absolute;
+  top: 70%;
+  right: 20%;
+  font-size: 1vmax;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.languages * {
+  padding: 0 1vmax;
+}
+
+.icon {
+  text-decoration: none;
+}
+
+.icon > svg {
+  height: 2vmax;
+}
+
+.icon:hover > svg {
+  fill: var(--active-color);
 }
 /*#endregion*/

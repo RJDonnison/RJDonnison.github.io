@@ -122,5 +122,6 @@ for (let index = 0; index < tiles.length; index++) {
 function SetPage() {
   const activeColor = document.body.dataset.color;
   document.documentElement.style.setProperty("--active-color", activeColor);
-  nav.children[2].href = "#";
+  const link = getElementById("outer-link");
+  nav.children[2].href = outer - link.href;
 }
