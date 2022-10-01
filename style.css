@@ -1,0 +1,19 @@
+/**Setup and fonts*/
+/*#region*/
+@font-face {
+  font-family: Kanit;
+  src: url(fonts/Kanit-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: Kanit;
+}
+
+body {
+  background-color: #212121;
+}
+/*#endregion*/
