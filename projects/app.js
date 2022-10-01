@@ -118,3 +118,8 @@ for (let index = 0; index < tiles.length; index++) {
     OpenTile(tile);
   });
 }
+
+function SetColor() {
+  const activeColor = document.body.dataset.color;
+  document.documentElement.style.setProperty("--active-color", activeColor);
+}

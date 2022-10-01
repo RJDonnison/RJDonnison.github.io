@@ -18,7 +18,7 @@ body {
   height: 100vh;
 }
 
-:root{
+:root {
   --active-color: #fff;
 }
 /*#endregion*/
@@ -45,7 +45,7 @@ body {
 /*#region*/
 /*TODO: fix coloring issues*/
 nav {
-  position: absolute;
+  position: fixed;
   top: 63%;
   left: 50%;
   transform: translate(-50%);
