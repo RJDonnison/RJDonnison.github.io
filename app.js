@@ -19,7 +19,7 @@ window.onmousemove = (e) => {
     gallery.animate(
       { transform: `translate(${panX}px, ${panY}px)` },
       {
-        duration: 5000,
+        duration: 2000,
         fill: "forwards",
         easing: "ease",
       }
@@ -59,11 +59,14 @@ async function OpenTile(tile) {
       }
     );
 
+    //*Setup nav
     const activeColor = window
       .getComputedStyle(tile, null)
       .getPropertyValue("background-color");
 
     document.documentElement.style.setProperty("--active-color", activeColor);
+    nav.children[1].href = `projects/${tile.dataset.about}.html`;
+    nav.children[2].href = tile.dataset.link;
 
     galleryAnimation.onfinish = () => {
       nav.animate(
