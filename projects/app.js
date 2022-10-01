@@ -65,7 +65,7 @@ async function OpenTile(tile) {
       .getPropertyValue("background-color");
 
     document.documentElement.style.setProperty("--active-color", activeColor);
-    nav.children[1].href = `projects/${tile.dataset.about}.html`;
+    nav.children[1].href = `${tile.dataset.about}.html`;
     nav.children[2].href = tile.dataset.link;
 
     galleryAnimation.onfinish = () => {
