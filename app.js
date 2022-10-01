@@ -28,11 +28,12 @@ window.onmousemove = (e) => {
 };
 
 const tiles = document.getElementsByClassName("tile");
+const nav = document.getElementById("nav");
 
 var activeTile = null;
 
 //*Open tile
-function OpenTile(tile) {
+async function OpenTile(tile) {
   if (move) {
     move = false;
     tile.dataset.status = "active";
@@ -41,7 +42,15 @@ function OpenTile(tile) {
     const panX = maxX * 0.5 * -1,
       panY = maxY * 0.5 * -1;
 
-    gallery.animate(
+    //*Hide other tiles
+    for (let index = 0; index < tiles.length; index++) {
+      const element = tiles[index];
+      if (element != tile) {
+        element.dataset.status = "hidden";
+      }
+    }
+
+    const galleryAnimation = gallery.animate(
       { transform: `translate(${panX}px, ${panY}px)` },
       {
         duration: 800,
@@ -50,16 +59,25 @@ function OpenTile(tile) {
       }
     );
 
+    const activeColor = window
+      .getComputedStyle(tile, null)
+      .getPropertyValue("background-color");
+
+    document.documentElement.style.setProperty("--active-color", activeColor);
+
+    galleryAnimation.onfinish = () => {
+      nav.animate(
+        { opacity: "1" },
+        {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease",
+        }
+      );
+    };
+
     //*Save active tile
     activeTile = tile;
-
-    //*Hide other tiles
-    for (let index = 0; index < tiles.length; index++) {
-      const element = tiles[index];
-      if (element != tile) {
-        element.dataset.status = "hidden";
-      }
-    }
   }
 }
 
@@ -70,6 +88,15 @@ function CloseTile() {
     const tile = tiles[index];
     tile.dataset.status = "inactive";
   }
+
+  nav.animate(
+    { opacity: "0" },
+    {
+      duration: 200,
+      fill: "forwards",
+      easing: "ease",
+    }
+  );
 }
 
 //*Close tile on click
