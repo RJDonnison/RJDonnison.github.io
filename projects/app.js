@@ -1,21 +1,27 @@
+//*Get gallery
 const gallery = document.getElementById("gallery");
 
+//*Move gallery bool
 var move = true;
+//*Max constraints
 const maxX = gallery.offsetWidth - window.innerWidth,
   maxY = gallery.offsetHeight - window.innerHeight;
 
 //*Pan Screen
 window.onmousemove = (e) => {
   if (move) {
+    //*Mouse positions
     const mouseX = e.clientX,
       mouseY = e.clientY;
 
+    //*Mouse pos as decimal
     const xDecimal = mouseX / window.innerWidth,
       yDecimal = mouseY / window.innerHeight;
 
     const panX = maxX * xDecimal * -1,
       panY = maxY * yDecimal * -1;
 
+    //*Move gallery
     gallery.animate(
       { transform: `translate(${panX}px, ${panY}px)` },
       {
@@ -27,14 +33,17 @@ window.onmousemove = (e) => {
   }
 };
 
+//*Get elements
 const tiles = document.getElementsByClassName("tile");
 const nav = document.getElementById("nav");
 
+//*Active till storage
 var activeTile = null;
 
 //*Open tile
 async function OpenTile(tile) {
   if (move) {
+    //*Stop movement
     move = false;
     tile.dataset.status = "active";
 
@@ -50,6 +59,7 @@ async function OpenTile(tile) {
       }
     }
 
+    //*Center gallery
     const galleryAnimation = gallery.animate(
       { transform: `translate(${panX}px, ${panY}px)` },
       {
@@ -68,6 +78,7 @@ async function OpenTile(tile) {
     nav.children[1].href = `${tile.dataset.about}.html`;
     nav.children[2].href = tile.dataset.link;
 
+    //*Make nav visible after gallery center
     galleryAnimation.onfinish = () => {
       nav.animate(
         { opacity: "1" },
@@ -86,12 +97,15 @@ async function OpenTile(tile) {
 
 //*Close active tile
 function CloseTile() {
+  //*Alow movement
   move = true;
+  //*Close and unhide tiles
   for (let index = 0; index < tiles.length; index++) {
     const tile = tiles[index];
     tile.dataset.status = "inactive";
   }
 
+  //*Remove nav
   nav.animate(
     { opacity: "0" },
     {
@@ -119,9 +133,10 @@ for (let index = 0; index < tiles.length; index++) {
   });
 }
 
+//*Setup about pages
 function SetPage() {
   const activeColor = document.body.dataset.color;
   document.documentElement.style.setProperty("--active-color", activeColor);
   const link = getElementById("outer-link");
-  nav.children[2].href = outer - link.href;
+  nav.children[2].href = link.href;
 }
