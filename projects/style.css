@@ -53,7 +53,7 @@ nav {
   flex-direction: row;
   align-items: center;
   width: fit-content;
-  border-radius: 100vmax;
+  border-radius: 100px;
   background-color: #ffffff;
   opacity: 0;
   z-index: 5;
@@ -68,7 +68,7 @@ nav > a {
   color: #212121;
   width: 7vmax;
   text-decoration: none;
-  border-radius: 100vmax;
+  border-radius: 100px;
 }
 
 nav > a:hover {
@@ -83,7 +83,7 @@ nav > a[data-status="active"] {
 /**Tiles*/
 /*#region*/
 .tile {
-  border-radius: 1vmax;
+  border-radius: 10px;
   position: absolute;
   transition: all 800ms ease;
 }
@@ -277,4 +277,24 @@ nav > a[data-status="active"] {
 }
 
 /*#endregion*/
+/*#endregion*/
+
+/**Projects page*/
+/*#region*/
+.text {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translate(0, -50%);
+  width: 40%;
+  height: 35%;
+  border-radius: 50px;
+  background-color: var(--active-color);
+  color: #212121;
+  font-size: 1.5vmax;
+}
+
+.text > p {
+  padding: 5%;
+}
 /*#endregion*/

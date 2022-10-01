@@ -119,7 +119,8 @@ for (let index = 0; index < tiles.length; index++) {
   });
 }
 
-function SetColor() {
+function SetPage() {
   const activeColor = document.body.dataset.color;
   document.documentElement.style.setProperty("--active-color", activeColor);
+  nav.children[2].href = "#";
 }
