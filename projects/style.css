@@ -133,7 +133,7 @@ nav > a[data-status="active"] {
 }
 
 .tile:nth-child(4) {
-  background-color: rgb(66, 165, 245);
+  background-color: rgb(239, 83, 80);
   height: 12%;
   width: 7%;
   left: 42%;
@@ -141,7 +141,7 @@ nav > a[data-status="active"] {
 }
 
 .tile:nth-child(5) {
-  background-color: rgb(239, 83, 80);
+  background-color: rgb(66, 165, 245);
   height: 9%;
   width: 8%;
   left: 12%;
@@ -299,6 +299,9 @@ nav > a[data-status="active"] {
   transform: translate(0, -50%);
   width: 40%;
   height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
   background-color: var(--active-color);
   color: #212121;
