@@ -141,6 +141,7 @@ function SetPage() {
   const activeColor = document.body.dataset.color;
   document.documentElement.style.setProperty("--active-color", activeColor);
   const display = getElementById(display);
+
   const link = getElementById("outer-link");
   nav.children[2].href = link.href;
 }
