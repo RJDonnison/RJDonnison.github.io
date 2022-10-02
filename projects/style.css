@@ -312,6 +312,10 @@ nav > a[data-status="active"] {
   padding: 5%;
 }
 
+.text a{
+  color: #212121;
+}
+
 .languages {
   position: absolute;
   top: 70%;
