@@ -281,7 +281,7 @@ nav > a[data-status="active"] {
 
 /**Projects page*/
 /*#region*/
-.display {
+#display {
   position: absolute;
   position: absolute;
   top: 50%;
@@ -290,6 +290,11 @@ nav > a[data-status="active"] {
   aspect-ratio: 16/9;
   transform: translate(0, -50%);
   border-radius: 10px;
+  transition: box-shadow 400ms ease;
+}
+
+#display:hover{
+  box-shadow: rgba(255, 238, 88, 0.4) -5px 5px, rgba(255, 238, 88, 0.3) -10px 10px, rgba(255, 238, 88, 0.2) -15px 15px, rgba(255, 238, 88, 0.1) -20px 20px, rgba(255, 238, 88, 0.05) -25px 25px;
 }
 
 .text {
@@ -306,6 +311,7 @@ nav > a[data-status="active"] {
   background-color: var(--active-color);
   color: #212121;
   font-size: 1.5vmax;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .text > p {
