@@ -331,10 +331,15 @@ nav > a[data-status="active"] {
 
 .icon {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
 .icon > svg {
   height: 2vmax;
+  z-index: 1;
 }
 
 .icon:hover > svg {
