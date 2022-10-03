@@ -19,7 +19,7 @@ body {
 }
 
 :root {
-  --active-color: #fff;
+  --active-color: 0,0,0;
 }
 /*#endregion*/
 
@@ -76,7 +76,7 @@ nav > a:hover {
 }
 
 nav > a[data-status="active"] {
-  background-color: var(--active-color);
+  background-color: rgb(var(--active-color));
 }
 /*#endregion*/
 
@@ -294,7 +294,7 @@ nav > a[data-status="active"] {
 }
 
 #display:hover{
-  box-shadow: rgba(255, 238, 88, 0.4) -5px 5px, rgba(255, 238, 88, 0.3) -10px 10px, rgba(255, 238, 88, 0.2) -15px 15px, rgba(255, 238, 88, 0.1) -20px 20px, rgba(255, 238, 88, 0.05) -25px 25px;
+  box-shadow: rgba(var(--active-color), 0.4) -5px 5px, rgba(var(--active-color), 0.3) -10px 10px, rgba(var(--active-color), 0.2) -15px 15px, rgba(var(--active-color), 0.1) -20px 20px, rgba(var(--active-color), 0.05) -25px 25px;
 }
 
 .text {
@@ -308,7 +308,7 @@ nav > a[data-status="active"] {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background-color: var(--active-color);
+  background-color: rgb(var(--active-color));
   color: #212121;
   font-size: 1.5vmax;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -353,6 +353,6 @@ nav > a[data-status="active"] {
 }
 
 .icon:hover > svg {
-  fill: var(--active-color);
+  fill: rgb(var(--active-color));
 }
 /*#endregion*/

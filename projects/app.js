@@ -76,7 +76,10 @@ async function OpenTile(tile) {
       .getComputedStyle(tile, null)
       .getPropertyValue("background-color");
 
-    document.documentElement.style.setProperty("--active-color", activeColor);
+    document.documentElement.style.setProperty(
+      "--active-color",
+      activeColor.split("rgb(")[1].split(")")[0]
+    );
     nav.children[1].href = `${tile.dataset.about}.html`;
     nav.children[2].href = tile.dataset.link;
 
