@@ -19,8 +19,21 @@ body {
 }
 
 :root {
-  --active-color: 0,0,0;
+  --active-color: 0, 0, 0;
 }
+/*#endregion*/
+
+/**Page transitions*/
+/*#region*/
+.transition-main {
+  opacity: 1;
+  transition: 500ms;
+}
+
+html.is-animating .transition-main {
+  opacity: 0;
+}
+
 /*#endregion*/
 
 /**Main movable page*/
@@ -46,7 +59,7 @@ body {
 /*TODO: fix coloring issues*/
 nav {
   position: fixed;
-  top: 63%;
+  top: 85vh;
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -124,7 +137,7 @@ nav > a[data-status="active"] {
 
 /**Individual tiles*/
 /*#region*/
-.tile:nth-child(3) {
+.tile:nth-child(2) {
   background-color: rgb(255, 238, 88);
   height: 7%;
   width: 10%;
@@ -132,7 +145,7 @@ nav > a[data-status="active"] {
   top: 5%;
 }
 
-.tile:nth-child(4) {
+.tile:nth-child(3) {
   background-color: rgb(239, 83, 80);
   height: 12%;
   width: 7%;
@@ -140,7 +153,7 @@ nav > a[data-status="active"] {
   top: 12%;
 }
 
-.tile:nth-child(5) {
+.tile:nth-child(4) {
   background-color: rgb(66, 165, 245);
   height: 9%;
   width: 8%;
@@ -148,7 +161,7 @@ nav > a[data-status="active"] {
   top: 34%;
 }
 
-.tile:nth-child(6) {
+.tile:nth-child(5) {
   background-color: rgb(102, 187, 106);
   height: 7%;
   width: 6%;
@@ -156,7 +169,7 @@ nav > a[data-status="active"] {
   top: 48%;
 }
 
-.tile:nth-child(7) {
+.tile:nth-child(6) {
   background-color: rgb(171, 71, 188);
   height: 8%;
   width: 10%;
@@ -164,7 +177,7 @@ nav > a[data-status="active"] {
   top: 56%;
 }
 
-.tile:nth-child(8) {
+.tile:nth-child(7) {
   background-color: rgb(255, 167, 38);
   height: 12%;
   width: 12%;
@@ -172,7 +185,7 @@ nav > a[data-status="active"] {
   top: 8%;
 }
 
-.tile:nth-child(9) {
+.tile:nth-child(8) {
   background-color: rgb(63, 81, 181);
   height: 8%;
   width: 10%;
@@ -180,7 +193,7 @@ nav > a[data-status="active"] {
   top: 68%;
 }
 
-.tile:nth-child(10) {
+.tile:nth-child(9) {
   background-color: rgb(141, 110, 99);
   height: 12%;
   width: 9%;
@@ -188,7 +201,7 @@ nav > a[data-status="active"] {
   top: 42%;
 }
 
-.tile:nth-child(11) {
+.tile:nth-child(10) {
   background-color: rgb(234, 137, 154);
   height: 6%;
   width: 7%;
@@ -196,7 +209,7 @@ nav > a[data-status="active"] {
   top: 84%;
 }
 
-.tile:nth-child(12) {
+.tile:nth-child(11) {
   background-color: rgb(31, 58, 61);
   height: 7%;
   width: 7%;
@@ -204,7 +217,7 @@ nav > a[data-status="active"] {
   top: 67%;
 }
 
-.tile:nth-child(13) {
+.tile:nth-child(12) {
   background-color: rgb(244, 169, 0);
   height: 12%;
   width: 10%;
@@ -212,7 +225,7 @@ nav > a[data-status="active"] {
   top: 84%;
 }
 
-.tile:nth-child(14) {
+.tile:nth-child(13) {
   background-color: rgb(108, 113, 86);
   height: 8%;
   width: 10%;
@@ -220,7 +233,7 @@ nav > a[data-status="active"] {
   top: 64%;
 }
 
-.tile:nth-child(15) {
+.tile:nth-child(14) {
   background-color: rgb(53, 104, 045);
   height: 10%;
   width: 12%;
@@ -228,7 +241,7 @@ nav > a[data-status="active"] {
   top: 32%;
 }
 
-.tile:nth-child(16) {
+.tile:nth-child(15) {
   background-color: rgb(155, 17, 30);
   height: 9%;
   width: 7%;
@@ -236,7 +249,7 @@ nav > a[data-status="active"] {
   top: 79%;
 }
 
-.tile:nth-child(17) {
+.tile:nth-child(16) {
   background-color: rgb(217, 80, 48);
   height: 8%;
   width: 7%;
@@ -244,7 +257,7 @@ nav > a[data-status="active"] {
   top: 20%;
 }
 
-.tile:nth-child(18) {
+.tile:nth-child(17) {
   background-color: rgb(189, 236, 182);
   height: 9%;
   width: 12%;
@@ -293,8 +306,12 @@ nav > a[data-status="active"] {
   transition: box-shadow 400ms ease;
 }
 
-#display:hover{
-  box-shadow: rgba(var(--active-color), 0.4) -5px 5px, rgba(var(--active-color), 0.3) -10px 10px, rgba(var(--active-color), 0.2) -15px 15px, rgba(var(--active-color), 0.1) -20px 20px, rgba(var(--active-color), 0.05) -25px 25px;
+#display:hover {
+  box-shadow: rgba(var(--active-color), 0.4) -5px 5px,
+    rgba(var(--active-color), 0.3) -10px 10px,
+    rgba(var(--active-color), 0.2) -15px 15px,
+    rgba(var(--active-color), 0.1) -20px 20px,
+    rgba(var(--active-color), 0.05) -25px 25px;
 }
 
 .text {
@@ -311,14 +328,15 @@ nav > a[data-status="active"] {
   background-color: rgb(var(--active-color));
   color: #212121;
   font-size: 1.5vmax;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .text > p {
   padding: 5%;
 }
 
-.text a{
+.text a {
   color: #212121;
 }
 
