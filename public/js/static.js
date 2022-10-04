@@ -82,9 +82,10 @@ async function OpenTile(tile) {
       activeColor.split("rgb(")[1].split(")")[0]
     );
     nav.children[1].href = tile.dataset.about;
-    let string = tile.dataset.about
-      .split("/")[1]
-      .replace(/-([a-z])/g, (_, char) => "-" + char.toUpperCase());
+    let string = tile.dataset.about.replace(
+      /-([a-z])/g,
+      (_, char) => "-" + char.toUpperCase()
+    );
     const link = string.charAt(0).toUpperCase() + string.slice(1);
     console.log(link);
     nav.children[2].href = `https://rjdonnison.github.io/${link}`;
