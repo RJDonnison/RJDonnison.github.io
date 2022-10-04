@@ -1,10 +1,11 @@
 //*Main moveable page
 //#region
 //*Get gallery
-const gallery = document.getElementById("gallery");
+let gallery = document.getElementById("gallery");
 
 //*Move gallery bool
 var move = true;
+
 //*Max constraints
 const maxX = gallery.offsetWidth - window.innerWidth,
   maxY = gallery.offsetHeight - window.innerHeight;

@@ -23,19 +23,6 @@ body {
 }
 /*#endregion*/
 
-/**Page transitions*/
-/*#region*/
-.transition-main {
-  opacity: 1;
-  transition: 500ms;
-}
-
-html.is-animating .transition-main {
-  opacity: 0;
-}
-
-/*#endregion*/
-
 /**Main movable page*/
 /*#region*/
 #gallery {
