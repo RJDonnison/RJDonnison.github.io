@@ -311,7 +311,7 @@ nav > a[data-status="active"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: rgb(var(--active-color));
   color: #212121;
   font-size: 1.5vmax;
