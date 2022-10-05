@@ -8,14 +8,11 @@ router.get("/", function (_req, res) {
 });
 
 router.get("/*", async function (req, res) {
-  //*Information i need - base color
-
   let string = req.url
     .split("/")[1]
+    .split("?")[0]
     .replace(/-([a-z])/g, (_, char) => "-" + char.toUpperCase());
   const link = string.charAt(0).toUpperCase() + string.slice(1);
-
-  // if (link.split(".js").length > 1) return res.end();
 
   await axios({
     method: "get",
@@ -23,7 +20,7 @@ router.get("/*", async function (req, res) {
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       "Content-Type": "application/json",
-      Accept: "application/vnd.github.mercy-preview+json", // MUST ADD TO INCLUDE TOPICS
+      Accept: "application/vnd.github.mercy-preview+json",
     },
   }).then((response) => {
     return (
@@ -34,7 +31,9 @@ router.get("/*", async function (req, res) {
 
   const title = link.replace("-", " ");
 
-  const image = `/images${req.url}.png`;
+  const image = `/images/${string}.png`;
+
+  const color = req.query.color;
 
   res.render("about", {
     title: title,
@@ -42,6 +41,7 @@ router.get("/*", async function (req, res) {
     description: description,
     languages: languages,
     image: image,
+    color: color,
   });
 });
 

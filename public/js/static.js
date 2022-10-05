@@ -75,13 +75,12 @@ async function OpenTile(tile) {
     //*Setup nav
     const activeColor = window
       .getComputedStyle(tile, null)
-      .getPropertyValue("background-color");
+      .getPropertyValue("background-color")
+      .split("rgb(")[1]
+      .split(")")[0];
 
-    document.documentElement.style.setProperty(
-      "--active-color",
-      activeColor.split("rgb(")[1].split(")")[0]
-    );
-    nav.children[1].href = tile.dataset.about;
+    document.documentElement.style.setProperty("--active-color", activeColor);
+    nav.children[1].href = `${tile.dataset.about}?color=${activeColor}`;
     let string = tile.dataset.about.replace(
       /-([a-z])/g,
       (_, char) => "-" + char.toUpperCase()
@@ -148,6 +147,8 @@ for (let index = 0; index < tiles.length; index++) {
 
 //*Setup about pages
 function SetPage() {
-  const activeColor = document.body.dataset.color;
-  document.documentElement.style.setProperty("--active-color", activeColor);
+  document.documentElement.style.setProperty(
+    "--active-color",
+    document.body.dataset.color
+  );
 }
