@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const port = 3000;
@@ -8,6 +10,12 @@ const port = 3000;
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
+
+//*Setup middleware
+app.use(express.urlencoded());
+app.use(express.json());
+
+app.use(cors());
 
 //*Routes
 const projects = require("./routes/projects.js");
