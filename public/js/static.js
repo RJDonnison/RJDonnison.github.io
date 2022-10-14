@@ -1,3 +1,17 @@
+// File: main.js
+// Import Highway
+const Highway = require("@dogstudio/highway");
+
+// Import Transitions
+const Fade = require("./fade.js");
+
+// Call Highway.Core once.
+const H = new Highway.Core({
+  transitions: {
+    default: Fade,
+  },
+});
+
 //*Main moveable page
 //#region
 //*Get gallery

@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/RJDonnison/RJDonnison.github.io#readme",
   "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
     "axios": "^1.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "gsap": "^3.11.3",
     "nodemon": "^2.0.20"
   }
 }
