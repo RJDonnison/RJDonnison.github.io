@@ -1,7 +1,7 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
 
-import axios from "axios";
+const axios = require("axios");
 
 router.get("/", function (_req, res) {
   res.render("hub");
