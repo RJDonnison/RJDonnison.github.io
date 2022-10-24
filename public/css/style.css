@@ -23,6 +23,11 @@ body {
 }
 /*#endregion*/
 
+/**Index page*/
+/*#region*/
+
+/*#endregion*/
+
 /**Main movable page*/
 /*#region*/
 #gallery {
@@ -44,7 +49,7 @@ body {
 /**Nav Bar*/
 /*#region*/
 /*TODO: fix coloring issues*/
-nav {
+nav{
   position: fixed;
   top: 85vh;
   left: 50%;
