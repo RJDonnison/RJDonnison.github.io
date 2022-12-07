@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* *Horizontal scrolling */
+/* #region */
+section.hScroll {
+  background-color: #121212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+  overflow: hidden auto;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100vh);
+}
+
+section.hScroll > .upright {
+  display: flex;
+  justify-content: space-evenly;
+  width: fit-content;
+  height: 100vh;
+  position: relative;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100vh);
+}
+
+/* #endregion */
