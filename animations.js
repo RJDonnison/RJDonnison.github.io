@@ -1,12 +1,11 @@
-var controller = new ScrollMagic.Controller();
+gsap.registerPlugin(ScrollTrigger);
 
-// Scale Scene
-var scale_scene = new ScrollMagic.Scene({
-  triggerElement: "#scale-trigger",
-  duration: 400,
-})
-  .setTween("#scale-animation", 20, {
-    transform: "scale(.75)",
-    ease: Linear.easeNone,
-  })
-  .addTo(controller);
+gsap.to("#scale-animation", {
+  duration: 10,
+  transform: "scale(.75)",
+  ease: Linear.easeNone,
+  scrollTrigger: {
+    trigger: "#scale-animation",
+    markers: true,
+  },
+});
