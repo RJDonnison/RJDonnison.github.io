@@ -1,52 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
-
+/**Setup*/
+/*#region*/
 * {
+  border: 0;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Kanit", sans-serif;
-}
-body {
-  height: 200vh;
-}
-/* 
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow: hidden;
 }
 
-::-webkit-scrollbar {
-  display: none;
+h1 {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
 }
-*/
-/* *Horizontal scrolling */
-/* #region */
-/* section.hScroll {
-  background-color: #121212;
+
+h2 {
+  color: #fff;
+  text-transform: uppercase;
+}
+/*#endregion*/
+
+/**Header*/
+/*#region*/
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/home-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header:after {
   position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #259dd0;
+  opacity: 0.2;
   top: 0;
   left: 0;
-  width: 100vh;
-  height: 100vw;
-  overflow: hidden auto;
-  transform-origin: top left;
-  transform: rotate(-90deg) translateX(-100vh);
+  display: block;
+  content: "";
 }
 
-section.hScroll > .upright {
-  display: flex;
-  justify-content: space-evenly;
-  width: fit-content;
-  height: 100vh;
-  position: relative;
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-100vh);
-} */
-
-/* #endregion */
-
-#scale-animation {
-  position: relative;
-  top: 110vh;
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
 }
+/*#endregion*/
