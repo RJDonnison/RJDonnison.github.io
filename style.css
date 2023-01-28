@@ -1,3 +1,16 @@
+/**Fonts*/
+/*#region*/
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Regular.ttf");
+}
+/*#endregion*/
+
 /**Setup*/
 /*#region*/
 * {
@@ -7,12 +20,17 @@
 }
 
 h1 {
+  font-family: "Ubuntu";
+  font-size: 13vmax;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
 }
 
 h2 {
+  font-family: "Inter";
+  font-size: 2vmax;
+  font-weight: lighter;
   color: #fff;
   text-transform: uppercase;
 }
@@ -27,6 +45,10 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 header:after {
