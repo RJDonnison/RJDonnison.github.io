@@ -24,7 +24,14 @@
   box-sizing: border-box;
 }
 
-body {
+/**Removing scroll*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/**Smooth scrolling and background color*/
+html {
+  scroll-behavior: smooth;
   background-color: #151513;
 }
 
@@ -32,6 +39,7 @@ main {
   min-height: 100vh;
 }
 
+/**Header styling*/
 h1 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 13vmax;
@@ -40,6 +48,7 @@ h1 {
   text-transform: uppercase;
 }
 
+/**Sub text styling*/
 h2 {
   font-family: "Inter", monospace;
   font-size: 2vmax;
@@ -48,6 +57,7 @@ h2 {
   text-transform: uppercase;
 }
 
+/**Scroll icon*/
 .scroll-icon {
   position: absolute;
   left: 50%;
@@ -62,6 +72,7 @@ h2 {
   height: 100%;
 }
 
+/**Shaped edge*/
 .edge {
   position: absolute;
   bottom: 0;
@@ -79,7 +90,7 @@ polygon {
 }
 /*#endregion*/
 
-/**Header*/
+/**Home header*/
 /*#region*/
 #home-header {
   max-width: 100vw;
@@ -90,6 +101,7 @@ polygon {
   background-size: cover;
 }
 
+/**Images tint*/
 #home-header:after {
   position: absolute;
   height: 100%;
@@ -102,6 +114,7 @@ polygon {
   content: "";
 }
 
+/**Header text*/
 #home-header div {
   position: absolute;
   top: 0;
@@ -112,9 +125,10 @@ polygon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
+/**Header text positioning*/
 #home-header div h2:nth-of-type(1) {
   margin-right: 41%;
 }
