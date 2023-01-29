@@ -9,24 +9,30 @@
   </head>
 
   <body>
-    <header>
+    <header id="home-header">
       <div>
         <h2>I’m</h2>
-        <h1>Reuben</h1>
+        <h1 data-value="ReuJDon">ReuJDon</h1>
         <h2>
           A junior <br />
           web developer
         </h2>
+        <a href="#" class="scroll-icon"><img src="/images/mouse.svg" /></a>
       </div>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
+        class="edge"
       >
-        <polygon fill="white" points="50,100 50,80 100,0 100,100" />
-        <polygon fill="white" points="0,0 50,80 50,100 0,100" />
+        <polygon class="border" points="50,80 50,77.5 100,0 100,2.5" />
+        <polygon points="50,100 50,80 100,2.5 100,100" />
+        <polygon class="border" points="50,80 50,77.5 0,0 0,2.5" />
+        <polygon points="0,2.5 50,80 50,100 0,100" />
       </svg>
     </header>
   </body>
+
+  <script src="index.js"></script>
 </html>
