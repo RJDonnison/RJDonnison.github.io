@@ -1,6 +1,11 @@
 /**Fonts*/
 /*#region*/
 @font-face {
+  font-family: "Ubuntu Mono";
+  src: url("/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+}
+
+@font-face {
   font-family: "Ubuntu";
   src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
@@ -23,8 +28,12 @@ body {
   background-color: #151513;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
-  font-family: "Space Mono", monospace;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 13vmax;
   font-weight: bold;
   color: #fff;
@@ -73,7 +82,7 @@ polygon {
 /**Header*/
 /*#region*/
 #home-header {
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   background-image: url(/images/home-header.jpg);
   background-position: center;
