@@ -1,3 +1,5 @@
+//*Random letters on load
+//#region
 const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let interval = null;
@@ -26,3 +28,12 @@ interval = setInterval(() => {
 
   iteration += 1 / 4;
 }, 30);
+//#endregion
+
+//*gsap animations
+//#region
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+//#endregion
