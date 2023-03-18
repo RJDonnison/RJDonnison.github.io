@@ -1,0 +1,26 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Reuben Donnison",
+  "license": "ISC",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RJDonnison/PortfolioSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RJDonnison/PortfolioSite/issues"
+  },
+  "homepage": "https://github.com/RJDonnison/PortfolioSite",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5"
+  }
+}
