@@ -36,4 +36,28 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+let timeline = document.getElementById("timeline");
+
+gsap.to("#timeline progress", {
+  value: 100,
+  scrollTrigger: {
+    trigger: timeline,
+    start: "top end",
+    end: () => `+=${timeline.offsetWidth}`,
+    scrub: true,
+  },
+  ease: "none",
+});
+
+gsap.to(".projects", {
+  x: "-100%",
+  scrollTrigger: {
+    trigger: timeline,
+    end: () => `+=${timeline.offsetWidth}`,
+    pin: true,
+    scrub: true,
+  },
+  ease: "none",
+});
 //#endregion

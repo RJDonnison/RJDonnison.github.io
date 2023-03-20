@@ -18,7 +18,12 @@
           A junior <br />
           web developer
         </h3>
-        <a href="#scroll" class="scroll-icon"><img src="images/mouse.svg" /></a>
+        <a href="#scroll" class="scroll-icon">
+          <!-- TODO: workout how to use svg external -->
+          <svg>
+            <use xlink:href="images/mouse.svg#mouse"></use>
+          </svg>
+        </a>
       </div>
 
       <svg
@@ -40,7 +45,7 @@
           <span class="header"
             ><span></span>
             <h2>About me</h2>
-            <a href="https://github.com/RJDonnison">
+            <a href="https://github.com/RJDonnison" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -70,6 +75,43 @@
         </div>
         <img src="images/about.jpg" />
       </article>
+      <article id="timeline">
+        <progress value="0" max="100"></progress>
+        <div class="projects">
+          <h1>2022</h1>
+          <div>
+            <span class="header"
+              ><span></span>
+              <h2>Avoiding Scams</h2>
+            </span>
+            <img src="images/scams.jpg" />
+            <p>
+              I created this website as a school project in 2022. The website is
+              for elderly people (70+) to identify internet scams and then avoid
+              them so they can be more confident online. It will be used when
+              elderly people want to enhance their technological confidence and
+              also when they are uncertain about potential internet scams.
+            </p>
+          </div>
+          <div>
+            <span class="header"
+              ><span></span>
+              <h2>Travamigos</h2>
+            </span>
+            <img src="images/travamigos.jpg" />
+            <p>
+              I created this website to enhance my css animation skills in 2022.
+              I also created this site to learn about javascript animation
+              integration. I based the design off the Travamigos website found
+              <a href="https://travamigos.com/">https://travamigos.com/</a> The
+              site is currently not responsive as that was not the intended
+              learning of the site.
+            </p>
+          </div>
+          <h1>2023</h1>
+        </div>
+      </article>
+      <article id="achievements"></article>
     </main>
   </body>
 </html>

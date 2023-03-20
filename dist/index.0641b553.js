@@ -577,7 +577,28 @@ interval = setInterval(()=>{
     if (iteration >= target.dataset.value.length) clearInterval(interval);
     iteration += 1 / 4;
 }, 30);
-(0, _gsap.gsap).registerPlugin((0, _scrollTrigger.ScrollTrigger)); //#endregion
+(0, _gsap.gsap).registerPlugin((0, _scrollTrigger.ScrollTrigger));
+let timeline = document.getElementById("timeline");
+(0, _gsap.gsap).to("#timeline progress", {
+    value: 100,
+    scrollTrigger: {
+        trigger: timeline,
+        start: "top end",
+        end: ()=>`+=${timeline.offsetWidth}`,
+        scrub: true
+    },
+    ease: "none"
+});
+(0, _gsap.gsap).to(".projects", {
+    x: "-100%",
+    scrollTrigger: {
+        trigger: timeline,
+        end: ()=>`+=${timeline.offsetWidth}`,
+        pin: true,
+        scrub: true
+    },
+    ease: "none"
+}); //#endregion
 
 },{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
