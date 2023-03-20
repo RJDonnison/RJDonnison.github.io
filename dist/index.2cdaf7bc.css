@@ -112,7 +112,8 @@ p {
 
 .header a {
   width: 3vmax;
-  margin-left: 2vmax;
+  height: 3vmax;
+  margin-left: 1vmax;
 }
 
 .header a svg {
