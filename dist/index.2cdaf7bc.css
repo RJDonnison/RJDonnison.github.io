@@ -257,8 +257,26 @@ polygon {
   margin: 2vh 0;
 }
 
-#achievements {
-  height: 100vh;
+footer {
+  width: 100vw;
+}
+
+footer .srcd-img {
+  width: 50%;
+  aspect-ratio: 1.5;
+  background-image: url("footer.830fde42.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+  position: relative;
+  left: 50%;
+}
+
+footer .header h2 {
+  font-size: 1vmax;
 }
 
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
