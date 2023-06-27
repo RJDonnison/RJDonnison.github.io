@@ -7,7 +7,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "predeploy": "rimraf dist && parcel build ./*.html --public-url 'https://github.com/RJDonnison/PortfolioSite, https'",
+    "predeploy": "rimraf dist && parcel build ./src/*.html --public-url 'https://github.com/RJDonnison/PortfolioSite, https'",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -24,8 +24,9 @@
     "rimraf": "^5.0.1"
   },
   "dependencies": {
+    "cssnano": "^4.1.11",
+    "gh-pages": "^5.0.0",
     "gsap": "^3.12.1",
-    "parcel-bundler": "^1.12.5",
-    "push-dir": "^0.4.1"
+    "parcel-bundler": "^1.12.5"
   }
 }
