@@ -4,7 +4,7 @@ const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let interval = null;
 
-target = document.querySelector("h1");
+let target = document.querySelector("h1");
 
 let iteration = -2;
 
