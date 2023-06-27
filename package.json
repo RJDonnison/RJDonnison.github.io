@@ -7,7 +7,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "predeploy": "rimraf dist && parcel build ./src/*.html --public-url 'https://github.com/RJDonnison/PortfolioSite, https'",
+    "predeploy": "rimraf dist && parcel build ./src/*.html --public-url 'https://rjdonnison.github.io/PortfolioSite/, https://'",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
