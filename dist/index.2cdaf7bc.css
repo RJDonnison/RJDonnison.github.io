@@ -36,10 +36,10 @@ html {
 }
 
 article {
-  width: 100vw;
   padding-bottom: var(--article-corner-size);
   border-radius: 0 0 var(--article-corner-size) var(--article-corner-size);
   background-color: var(--main-bg-color);
+  width: 100vw;
 }
 
 article:nth-child(2n) {
@@ -81,10 +81,10 @@ p {
 }
 
 .scroll-icon {
-  height: 5vw;
-  width: 5vw;
   justify-content: center;
   align-items: center;
+  width: 5vw;
+  height: 5vw;
   margin-top: 95vh;
   display: flex;
   position: absolute;
@@ -93,9 +93,9 @@ p {
 }
 
 .scroll-icon svg {
+  fill: #e76f51;
   width: 100%;
   height: 100%;
-  fill: #e76f51;
   position: relative;
 }
 
@@ -105,9 +105,9 @@ p {
 }
 
 .header span {
+  background-color: #fff;
   width: 1vmax;
   height: .3vmax;
-  background-color: #fff;
 }
 
 .header a {
@@ -117,9 +117,9 @@ p {
 }
 
 .header a svg {
+  fill: #fff;
   width: 100%;
   height: 100%;
-  fill: #fff;
 }
 
 .header a:hover svg {
@@ -127,18 +127,18 @@ p {
 }
 
 #home-header {
-  max-width: 100vw;
-  height: 100vh;
   background-image: url("home-header.7ac8e899.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100vw;
+  height: 100vh;
 }
 
 .edge {
+  z-index: 2;
   width: 100%;
   height: 20vh;
-  z-index: 2;
   position: absolute;
   bottom: 0;
 }
@@ -152,11 +152,11 @@ polygon {
 }
 
 #home-header:after {
-  height: 100%;
-  width: 100%;
   opacity: .2;
   content: "";
   background-color: #2a9d8f;
+  width: 100%;
+  height: 100%;
   display: block;
   position: absolute;
   top: 0;
@@ -164,19 +164,19 @@ polygon {
 }
 
 #home-header div {
-  width: 100%;
-  height: 80vh;
   z-index: 3;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 80vh;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#home-header div h3:nth-of-type(1) {
+#home-header div h3:first-of-type {
   margin-right: 37%;
 }
 
@@ -185,9 +185,9 @@ polygon {
 }
 
 #about {
-  height: 70vh;
   justify-content: space-around;
   align-items: center;
+  height: 70vh;
   display: flex;
 }
 
@@ -196,9 +196,9 @@ polygon {
 }
 
 #about > img {
-  height: 100%;
   aspect-ratio: 10 / 14;
   border-radius: 50px;
+  height: 100%;
 }
 
 #timeline {
@@ -208,10 +208,10 @@ polygon {
 
 #timeline progress {
   appearance: none;
-  width: 100vw;
-  height: 5px;
   background: none;
   border: none;
+  width: 100vw;
+  height: 5px;
   position: absolute;
   top: 0;
   left: 0;
@@ -237,11 +237,11 @@ polygon {
 }
 
 .projects div {
-  min-width: 30vmax;
-  max-height: 90vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-width: 30vmax;
+  max-height: 90vh;
   margin: 5vh 2vw;
   display: flex;
 }
@@ -252,8 +252,8 @@ polygon {
 
 .projects div img {
   aspect-ratio: 16 / 9;
-  width: 100%;
   border-radius: 50px;
+  width: 100%;
   margin: 2vh 0;
 }
 
@@ -262,7 +262,6 @@ footer {
 }
 
 footer .srcd-img {
-  width: 50%;
   aspect-ratio: 1.5;
   background-image: url("footer.830fde42.jpg");
   background-position: center;
@@ -270,6 +269,7 @@ footer .srcd-img {
   background-size: cover;
   justify-content: flex-start;
   align-items: flex-end;
+  width: 50%;
   display: flex;
   position: relative;
   left: 50%;
