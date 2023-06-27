@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ReuJDon</title>
+  </head>
+
+  <body>
+    <header id="home-header">
+      <div>
+        <h3>I'm</h3>
+        <h1 data-value="ReuJDon">ReuJDon</h1>
+        <h3>
+          A junior <br />
+          web developer
+        </h3>
+        <a href="#scroll" class="scroll-icon">
+          <!-- TODO: workout how to use svg external -->
+          <svg>
+            <use xlink:href="./images/mouse.svg#mouse"></use>
+          </svg>
+        </a>
+      </div>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        class="edge"
+      >
+        <polygon class="border" points="50,80 50,77.5 100,0 100,2.5" />
+        <polygon points="50,100 50,80 100,2.5 100,100" />
+        <polygon class="border" points="50,80 50,77.5 0,0 0,2.5" />
+        <polygon points="0,2.5 50,80 50,100 0,100" />
+      </svg>
+    </header>
+
+    <main id="scroll">
+      <article id="about">
+        <div>
+          <span class="header"
+            ><span></span>
+            <h2>About me</h2>
+            <a href="https://github.com/RJDonnison" target="_blank">
+              <svg>
+                <use xlink:href="./images/github.svg#github"></use>
+              </svg>
+            </a>
+          </span>
+          <p>
+            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
+            condimentum ac, vestibulum eu nisl. <br /><br />
+            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis. Ut commodo efficitur neque.
+          </p>
+        </div>
+        <img src="./images/about.jpg" />
+      </article>
+      <article id="timeline">
+        <progress value="0" max="100"></progress>
+        <div class="projects">
+          <h1>2022</h1>
+          <div>
+            <span class="header">
+              <span></span>
+              <h2>Avoiding Scams</h2>
+              <a href="https://rjdonnison.github.io/Scams/" target="_blank">
+                <svg>
+                  <use xlink:href="./images/link.svg#link"></use>
+                </svg>
+              </a>
+              <a href="https://github.com/RJDonnison/Scams" target="_blank">
+                <svg>
+                  <use xlink:href="./images/github.svg#github"></use>
+                </svg>
+              </a>
+            </span>
+            <img src="./images/scams.jpg" />
+            <p>
+              I created this website as a school project in 2022. The website is
+              for elderly people (70+) to identify internet scams and then avoid
+              them so they can be more confident online. It will be used when
+              elderly people want to enhance their technological confidence and
+              also when they are uncertain about potential internet scams.
+            </p>
+          </div>
+          <div>
+            <span class="header">
+              <span></span>
+              <h2>Travamigos</h2>
+              <a
+                href="https://rjdonnison.github.io/Travamigos/"
+                target="_blank"
+              >
+                <svg>
+                  <use xlink:href="./images/link.svg#link"></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/RJDonnison/Travamigos"
+                target="_blank"
+              >
+                <svg>
+                  <use xlink:href="./images/github.svg#github"></use>
+                </svg>
+              </a>
+            </span>
+            <img src="./images/travamigos.jpg" />
+            <p>
+              I created this website to enhance my css animation skills in 2022.
+              I also created this site to learn about javascript animation
+              integration. I based the design off the Travamigos website found
+              <a href="https://travamigos.com/">https://travamigos.com/</a> The
+              site is currently not responsive as that was not the intended
+              learning of the site.
+            </p>
+          </div>
+          <h1>2023</h1>
+        </div>
+      </article>
+      <footer>
+        <div></div>
+        <div class="srcd-img">
+          <span class="header">
+            <span></span>
+            <h2>Photo by Reuben Donnison</h2>
+          </span>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
