@@ -295,13 +295,18 @@ polygon {
 /*#region*/
 footer {
   width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div {
+  width: 50%;
+  padding: 1vw;
 }
 
 footer .srcd-img {
-  position: relative;
-  left: 50%;
-  width: 50%;
   aspect-ratio: 1.5;
+  width: 50%;
   background-image: url(images/footer.jpg);
   background-position: center;
   background-repeat: none;
@@ -310,7 +315,15 @@ footer .srcd-img {
   justify-content: flex-start;
   align-items: flex-end;
 }
-footer .header h2 {
-  font-size: 1vmax;
+/*#endregion*/
+
+/**Color mode*/
+/*#region*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #bec7c7;
+    --second-bg-color: #d4d8d8;
+    --highlight-color: #2a9d8f;
+  }
 }
 /*#endregion*/
