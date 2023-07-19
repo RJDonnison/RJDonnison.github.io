@@ -21,6 +21,8 @@
   --main-bg-color: #252929;
   --second-bg-color: #151513;
   --highlight-color: #e76f51;
+  --main-text-color: #fff;
+  --second-text-color: #8f8f8f;
   --article-corner-size: 4vh;
 }
 
@@ -62,7 +64,7 @@ h1 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 13vmax;
   font-weight: bold;
-  color: #fff;
+  color: var(--main-text-color);
   text-transform: uppercase;
 }
 
@@ -70,7 +72,7 @@ h2 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 3vmax;
   font-weight: bold;
-  color: #fff;
+  color: var(--main-text-color);
   text-transform: uppercase;
 }
 
@@ -79,18 +81,18 @@ h3 {
   font-family: "Inter", monospace;
   font-size: 2vmax;
   font-weight: lighter;
-  color: #fff;
+  color: var(--main-text-color);
   text-transform: uppercase;
 }
 
 a {
-  color: #fff;
+  color: var(--main-text-color);
 }
 
 p {
   font-family: "Inter";
   font-size: 1.5vmax;
-  color: #fff;
+  color: var(--second-text-color);
 }
 /*#endregion*/
 
@@ -112,7 +114,7 @@ p {
   position: relative;
   width: 100%;
   height: 100%;
-  fill: #e76f51;
+  fill: var(--highlight-color);
 }
 /*#endregion*/
 
@@ -126,7 +128,7 @@ p {
 .header span {
   width: 1vmax;
   height: 0.3vmax;
-  background-color: #fff;
+  background-color: var(--main-text-color);
 }
 
 .header a {
@@ -138,7 +140,7 @@ p {
 .header a svg {
   width: 100%;
   height: 100%;
-  fill: #fff;
+  fill: var(--main-text-color);
 }
 
 .header a:hover svg {
@@ -324,6 +326,8 @@ footer .srcd-img {
     --main-bg-color: #bec7c7;
     --second-bg-color: #d4d8d8;
     --highlight-color: #2a9d8f;
+    --main-text-color: #000;
+    --second-text-color: #000;
   }
 }
 /*#endregion*/
