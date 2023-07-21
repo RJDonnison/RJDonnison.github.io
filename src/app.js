@@ -37,13 +37,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+let cornerSize =
+  document.documentElement.clientHeight *
+  (parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue(
+      "--article-corner-size"
+    )
+  ) /
+    100);
+
 let timeline = document.getElementById("timeline");
 
 gsap.to("#timeline progress", {
   value: 100,
   scrollTrigger: {
     trigger: timeline,
-    start: "top end",
+    start: `-${cornerSize} end`,
+    markers: true,
     end: () => `+=${timeline.offsetWidth}`,
     scrub: true,
   },
@@ -54,6 +64,7 @@ gsap.to(".projects", {
   x: "-100%",
   scrollTrigger: {
     trigger: timeline,
+    start: `-${cornerSize} end`,
     end: () => `+=${timeline.offsetWidth}`,
     pin: true,
     scrub: true,

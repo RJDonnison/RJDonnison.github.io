@@ -224,6 +224,7 @@ polygon {
   justify-content: space-around;
   align-items: center;
   height: 70vh;
+  outline: var(--highlight-color) 5px solid;
 }
 
 /**Text*/
