@@ -86,7 +86,7 @@ h3 {
 }
 
 a {
-  color: var(--main-text-color);
+  color: var(--second-text-color);
 }
 
 p {
@@ -301,21 +301,63 @@ footer {
   justify-content: space-between;
 }
 
-footer div {
+footer > div {
   width: 50%;
-  padding: 1vw;
+  padding: 0.5vw 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-footer .srcd-img {
-  aspect-ratio: 1.5;
-  width: 50%;
+footer p {
+  width: 80%;
+}
+
+footer .contact-stack {
+  margin-bottom: 3vw;
+}
+
+footer .contact-stack > a {
+  color: var(--main-text-color);
+  fill: var(--main-text-color);
+
+  display: flex;
+  width: 410px;
+  align-items: center;
+
+  font-family: Inter;
+  font-size: 1.5vw;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer .contact-stack > a svg {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 3vw;
+}
+
+footer .contact-stack > a:hover {
+  fill: var(--highlight-color);
+  color: var(--second-text, #8f8f8f);
+}
+
+footer > :last-child {
+  width: 70%;
+  aspect-ratio: 1.7;
   background-image: url(images/footer.jpg);
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 0;
+}
+
+footer > :last-child h2 {
+  font-size: 1vw;
 }
 /*#endregion*/
 
