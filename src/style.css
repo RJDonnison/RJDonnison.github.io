@@ -1,17 +1,17 @@
 /**Fonts*/
 /*#region*/
 @font-face {
-  font-family: "Ubuntu Mono";
+  font-family: Ubuntu-Mono;
   src: url("./fonts/UbuntuMono/UbuntuMono-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: Ubuntu;
   src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   src: url("./fonts/Inter/Inter-Regular.ttf");
 }
 /*#endregion*/
@@ -23,7 +23,6 @@
   --highlight-color: #e76f51;
   --main-text-color: #fff;
   --second-text-color: #8f8f8f;
-  --article-corner-size: 4vh;
 }
 
 /**Setup*/
@@ -46,12 +45,9 @@ html {
   background-color: var(--main-bg-color);
 }
 
-/**Article corner and color styling*/
-/*TODO: fix corner overlay*/
+/**Article color styling*/
 article {
-  width: 100vw;
-  padding-bottom: var(--article-corner-size);
-  border-radius: 0 0 var(--article-corner-size) var(--article-corner-size);
+  min-width: 100vw;
   background-color: var(--main-bg-color);
 }
 
@@ -60,17 +56,10 @@ article:nth-child(even) {
 }
 
 /**Header styling*/
-h1 {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 13vmax;
-  font-weight: bold;
-  color: var(--main-text-color);
-  text-transform: uppercase;
-}
-
+h1,
 h2 {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 3vmax;
+  font-family: Ubuntu-Mono, monospace;
+  font-size: 13vmax;
   font-weight: bold;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -78,7 +67,7 @@ h2 {
 
 /**Sub text styling*/
 h3 {
-  font-family: "Inter", monospace;
+  font-family: Inter, monospace;
   font-size: 2vmax;
   font-weight: lighter;
   color: var(--main-text-color);
@@ -92,7 +81,7 @@ a {
 
 /**Main text styling*/
 p {
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 1.5vmax;
   color: var(--second-text-color);
 }
@@ -131,6 +120,14 @@ p {
   width: 1vmax;
   height: 0.3vmax;
   background-color: var(--main-text-color);
+}
+
+.header > p {
+  font-family: Ubuntu-Mono, monospace;
+  font-size: 3vmax;
+  font-weight: bold;
+  color: var(--main-text-color);
+  text-transform: uppercase;
 }
 
 /**Header svg links*/
@@ -225,6 +222,7 @@ polygon {
   align-items: center;
   height: 70vh;
   outline: var(--highlight-color) 5px solid;
+  padding-bottom: 8vh;
 }
 
 /**Text*/
@@ -269,7 +267,7 @@ polygon {
 }
 
 /**Timeline date text*/
-#timeline h1 {
+#timeline h2 {
   font-size: 20vmax;
   text-align: center;
   transform: rotateZ(-90deg);
@@ -359,10 +357,10 @@ footer .contact-stack > a:hover {
 /**Half screen image */
 footer > :last-child {
   width: 70%;
-  aspect-ratio: 1.7;
+  aspect-ratio: 17/10;
   background-image: url(images/footer.jpg);
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
 
   justify-content: flex-end;
@@ -371,7 +369,7 @@ footer > :last-child {
   padding: 0;
 }
 
-footer > :last-child h2 {
+footer > :last-child p {
   font-size: 1vw;
 }
 /*#endregion*/

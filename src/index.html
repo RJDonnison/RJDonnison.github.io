@@ -5,8 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
+
+    <meta name="author" content="Reuben Donnison" />
+    <meta
+      name="description"
+      content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style."
+    />
+    <meta name="keywords" content="website, portfolio, developer" />
+
     <link rel="stylesheet" href="./style.css" />
-    <title>ReuJDon</title>
+    <script src="./app.js" defer></script>
+
+    <title>Reuben Donnison</title>
   </head>
 
   <body>
@@ -14,7 +24,7 @@
       <div>
         <h3>I'm</h3>
 
-        <h1 data-value="ReuJDon">ReuJDon</h1>
+        <h1 data-value="Reuben">Reuben</h1>
 
         <h3>
           A junior <br />
@@ -46,7 +56,7 @@
         <div>
           <span class="header">
             <span></span>
-            <h2>About me</h2>
+            <p>About me</p>
             <a href="https://github.com/RJDonnison" target="_blank">
               <svg>
                 <use xlink:href="./images/github.svg#github"></use>
@@ -70,18 +80,21 @@
           </p>
         </div>
 
-        <img src="./images/about.jpg" />
+        <img
+          src="./images/about.jpg"
+          alt="A person walking through a tunnel at night."
+        />
       </article>
       <article id="timeline">
         <progress value="0" max="100"></progress>
 
         <div class="projects">
-          <h1>2022</h1>
+          <h2>2022</h2>
 
           <div>
             <span class="header">
               <span></span>
-              <h2>Avoiding Scams</h2>
+              <p>Avoiding Scams</p>
               <a href="https://rjdonnison.github.io/Scams/" target="_blank">
                 <svg>
                   <use xlink:href="./images/link.svg#link"></use>
@@ -94,7 +107,10 @@
               </a>
             </span>
 
-            <img src="./images/scams.jpg" />
+            <img
+              src="./images/scams.jpg"
+              alt="Internet scams on a red background with a fishing hook."
+            />
 
             <p>
               I created this website as a school project in 2022. The website is
@@ -107,7 +123,7 @@
           <div>
             <span class="header">
               <span></span>
-              <h2>Travamigos</h2>
+              <p>Travamigos</p>
               <a
                 href="https://rjdonnison.github.io/Travamigos/"
                 target="_blank"
@@ -126,7 +142,10 @@
               </a>
             </span>
 
-            <img src="./images/travamigos.jpg" />
+            <img
+              src="./images/travamigos.jpg"
+              alt="A website with the words experience shared."
+            />
 
             <p>
               I created this website to enhance my css animation skills in 2022.
@@ -137,14 +156,14 @@
               learning of the site.
             </p>
           </div>
-          <h1>2023</h1>
+          <h2>2023</h2>
         </div>
       </article>
       <footer>
         <div>
           <span class="header">
             <span></span>
-            <h2>Get in touch</h2>
+            <p>Get in touch</p>
           </span>
 
           <p>
@@ -177,12 +196,10 @@
         <div>
           <span class="header">
             <span></span>
-            <h2>Photo by Reuben Donnison</h2>
+            <p>Photo by Reuben Donnison</p>
           </span>
         </div>
       </footer>
     </main>
   </body>
-
-  <script src="./app.js"></script>
 </html>
