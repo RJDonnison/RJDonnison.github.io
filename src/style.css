@@ -234,6 +234,7 @@ polygon {
 /**Portrait*/
 #about > img {
   height: 100%;
+  width: auto;
   aspect-ratio: 10/14;
   border-radius: 50px;
 }
