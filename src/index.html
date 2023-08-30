@@ -1,205 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
 
-    <meta name="author" content="Reuben Donnison" />
-    <meta
-      name="description"
-      content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style."
-    />
-    <meta name="keywords" content="website, portfolio, developer" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
 
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./app.js" defer></script>
+  <meta name="author" content="Reuben Donnison">
+  <meta name="description"
+    content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style.">
+  <meta name="keywords" content="website, portfolio, developer">
 
-    <title>Reuben Donnison</title>
-  </head>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 
-  <body>
-    <header id="welcome-header">
+  <title>Reuben Donnison</title>
+</head>
+
+<body>
+  <header id="welcome-header">
+    <div>
+      <h3>I'm</h3>
+
+      <h1 data-value="Reuben">Reuben</h1>
+
+      <h3>
+        A junior <br>
+        web developer
+      </h3>
+
+      <a href="#scroll" class="scroll-icon">
+        <svg>
+          <use xlink:href="./images/mouse.svg#mouse"></use>
+        </svg>
+      </a>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="edge">
+      <polygon class="border" points="50,80 50,77.5 100,0 100,2.5" />
+      <polygon points="50,100 50,80 100,2.5 100,100" />
+      <polygon class="border" points="50,80 50,77.5 0,0 0,2.5" />
+      <polygon points="0,2.5 50,80 50,100 0,100" />
+    </svg>
+  </header>
+
+  <main id="scroll">
+    <article id="about">
       <div>
-        <h3>I'm</h3>
+        <section class="header">
+          <span></span>
+          <h4>About me</h4>
+          <a href="https://github.com/RJDonnison" target="_blank">
+            <svg>
+              <use xlink:href="./images/github.svg#github"></use>
+            </svg>
+          </a>
+        </section>
 
-        <h1 data-value="Reuben">Reuben</h1>
-
-        <h3>
-          A junior <br />
-          web developer
-        </h3>
-
-        <a href="#scroll" class="scroll-icon">
-          <svg>
-            <use xlink:href="./images/mouse.svg#mouse"></use>
-          </svg>
-        </a>
+        <p>
+          Hello! I’m Reuben Donnison a student developer based in New Zealand.
+          I in year 13 attending Garin College in Nelson. My programming
+          journey started back in 2020 when I fell in love with creating
+          websites, since then I have been growing my web development skills.
+          However, I have also experimented with some game and app
+          development. I am currently working full-time in school to prepare
+          for university next year where I’m planning to take a course on
+          software development.
+          <br><br>
+          I dabble in photography some of which you can see here. I also love
+          music and play the drums and am learning the piano. I feel at home
+          on the water and windsurf whenever I can.
+        </p>
       </div>
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        class="edge"
-      >
-        <polygon class="border" points="50,80 50,77.5 100,0 100,2.5" />
-        <polygon points="50,100 50,80 100,2.5 100,100" />
-        <polygon class="border" points="50,80 50,77.5 0,0 0,2.5" />
-        <polygon points="0,2.5 50,80 50,100 0,100" />
-      </svg>
-    </header>
+      <img src="./images/about.jpg" alt="A person walking through a tunnel at night.">
+    </article>
+    <article id="timeline">
+      <progress value="0" max="100"></progress>
 
-    <main id="scroll">
-      <article id="about">
+      <div class="projects">
+        <h2>2022</h2>
+
         <div>
           <section class="header">
             <span></span>
-            <h4>About me</h4>
-            <a href="https://github.com/RJDonnison" target="_blank">
+            <h4>Avoiding Scams</h4>
+            <a href="https://rjdonnison.github.io/Scams/" target="_blank">
+              <svg>
+                <use xlink:href="./images/link.svg#link"></use>
+              </svg>
+            </a>
+            <a href="https://github.com/RJDonnison/Scams" target="_blank">
               <svg>
                 <use xlink:href="./images/github.svg#github"></use>
               </svg>
             </a>
           </section>
 
+          <img src="./images/scams.jpg" alt="Internet scams on a red background with a fishing hook.">
+
           <p>
-            Hello! I’m Reuben Donnison a student developer based in New Zealand.
-            I in year 13 attending Garin College in Nelson. My programming
-            journey started back in 2020 when I fell in love with creating
-            websites, since then I have been growing my web development skills.
-            However, I have also experimented with some game and app
-            development. I am currently working full-time in school to prepare
-            for university next year where I’m planning to take a course on
-            software development.
-            <br /><br />
-            I dabble in photography some of which you can see here. I also love
-            music and play the drums and am learning the piano. I feel at home
-            on the water and windsurf whenever I can.
+            I created this website as a school project in 2022. The website is
+            for elderly people (70+) to identify internet scams and then avoid
+            them so they can be more confident online. It will be used when
+            elderly people want to enhance their technological confidence and
+            also when they are uncertain about potential internet scams.
           </p>
         </div>
-
-        <img
-          src="./images/about.jpg"
-          alt="A person walking through a tunnel at night."
-        />
-      </article>
-      <article id="timeline">
-        <progress value="0" max="100"></progress>
-
-        <div class="projects">
-          <h2>2022</h2>
-
-          <div>
-            <section class="header">
-              <span></span>
-              <h4>Avoiding Scams</h4>
-              <a href="https://rjdonnison.github.io/Scams/" target="_blank">
-                <svg>
-                  <use xlink:href="./images/link.svg#link"></use>
-                </svg>
-              </a>
-              <a href="https://github.com/RJDonnison/Scams" target="_blank">
-                <svg>
-                  <use xlink:href="./images/github.svg#github"></use>
-                </svg>
-              </a>
-            </section>
-
-            <img
-              src="./images/scams.jpg"
-              alt="Internet scams on a red background with a fishing hook."
-            />
-
-            <p>
-              I created this website as a school project in 2022. The website is
-              for elderly people (70+) to identify internet scams and then avoid
-              them so they can be more confident online. It will be used when
-              elderly people want to enhance their technological confidence and
-              also when they are uncertain about potential internet scams.
-            </p>
-          </div>
-          <div>
-            <section class="header">
-              <span></span>
-              <h4>Travamigos</h4>
-              <a
-                href="https://rjdonnison.github.io/Travamigos/"
-                target="_blank"
-              >
-                <svg>
-                  <use xlink:href="./images/link.svg#link"></use>
-                </svg>
-              </a>
-              <a
-                href="https://github.com/RJDonnison/Travamigos"
-                target="_blank"
-              >
-                <svg>
-                  <use xlink:href="./images/github.svg#github"></use>
-                </svg>
-              </a>
-            </section>
-
-            <img
-              src="./images/travamigos.jpg"
-              alt="A website with the words experience shared."
-            />
-
-            <p>
-              I created this website to enhance my css animation skills in 2022.
-              I also created this site to learn about javascript animation
-              integration. I based the design off the Travamigos website found
-              <a href="https://travamigos.com/">https://travamigos.com/</a> The
-              site is currently not responsive as that was not the intended
-              learning of the site.
-            </p>
-          </div>
-          <h2>2023</h2>
-        </div>
-      </article>
-      <footer>
         <div>
           <section class="header">
             <span></span>
-            <h4>Get in touch</h4>
-          </section>
-
-          <p>
-            Feel free to contact me about projects you would like to collaborate
-            on or to find out more about my projects.
-          </p>
-
-          <div class="contact-stack">
-            <a href="mailto:reujdon@gmail.com" target="_blank">
+            <h4>Travamigos</h4>
+            <a href="https://rjdonnison.github.io/Travamigos/" target="_blank">
               <svg>
-                <use xlink:href="./images/gmail.svg#gmail"></use>
+                <use xlink:href="./images/link.svg#link"></use>
               </svg>
-              reujdon@gmail.com
             </a>
-            <a href="https://github.com/RJDonnison" target="_blank">
+            <a href="https://github.com/RJDonnison/Travamigos" target="_blank">
               <svg>
                 <use xlink:href="./images/github.svg#github"></use>
               </svg>
-              RJDonnison
             </a>
-            <a href="#" target="_blank">
-              <svg>
-                <use xlink:href="./images/linkedin.svg#linkedin"></use>
-              </svg>
-              reujdon
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <section class="header">
-            <span></span>
-            <h4>Photo by Reuben Donnison</h4>
           </section>
+
+          <img src="./images/travamigos.jpg" alt="A website with the words experience shared.">
+
+          <p>
+            I created this website to enhance my css animation skills in 2022.
+            I also created this site to learn about javascript animation
+            integration. I based the design off the Travamigos website found
+            <a href="https://travamigos.com/">https://travamigos.com/</a> The
+            site is currently not responsive as that was not the intended
+            learning of the site.
+          </p>
         </div>
-      </footer>
-    </main>
-  </body>
+        <h2>2023</h2>
+      </div>
+    </article>
+    <footer>
+      <div>
+        <section class="header">
+          <span></span>
+          <h4>Get in touch</h4>
+        </section>
+
+        <p>
+          Feel free to contact me about projects you would like to collaborate
+          on or to find out more about my projects.
+        </p>
+
+        <div class="contact-stack">
+          <a href="mailto:reujdon@gmail.com" target="_blank">
+            <svg>
+              <use xlink:href="./images/gmail.svg#gmail"></use>
+            </svg>
+            reujdon@gmail.com
+          </a>
+          <a href="https://github.com/RJDonnison" target="_blank">
+            <svg>
+              <use xlink:href="./images/github.svg#github"></use>
+            </svg>
+            RJDonnison
+          </a>
+          <a href="#" target="_blank">
+            <svg>
+              <use xlink:href="./images/linkedin.svg#linkedin"></use>
+            </svg>
+            reujdon
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <section class="header">
+          <span></span>
+          <h4>Photo by Reuben Donnison</h4>
+        </section>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
