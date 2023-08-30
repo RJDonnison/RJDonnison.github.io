@@ -119,6 +119,7 @@ p {
 .header span {
   width: 1vmax;
   height: 0.3vmax;
+  margin-right: 0.2vw;
   background-color: var(--main-text-color);
 }
 
@@ -277,6 +278,10 @@ polygon {
 .projects {
   display: flex;
   align-items: center;
+}
+
+.projects .header {
+  align-self: flex-start;
 }
 
 /**Project section */
