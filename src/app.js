@@ -47,9 +47,14 @@ gsap.registerPlugin(ScrollTrigger);
 //Get timeline
 let timeline = document.getElementById("timeline");
 
+//Set width of projects by adding element sizes
+let projects = document.getElementById("projects");
+let width = -window.screen.width;
+for (const element of projects.children) width += element.offsetWidth;
+
 //Timeline horizontal scroll
-gsap.to(".projects", {
-  x: "-100%",
+gsap.to("#projects", {
+  x: `-${width}px`,
   scrollTrigger: {
     trigger: timeline,
     start: `start end`,
@@ -80,6 +85,7 @@ gsap.to("footer", {
     trigger: timeline,
     start: `start end`,
     end: () => `+=${timeline.offsetWidth}`,
+    pinSpacing: false,
     scrub: true,
   },
   ease: "none",
