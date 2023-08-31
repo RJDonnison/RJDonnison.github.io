@@ -1,6 +1,9 @@
 //Import path
 const path = require("path");
 
+//Import fs
+const fs = require("fs");
+
 //Import dotenv
 require("dotenv").config();
 
@@ -12,40 +15,12 @@ const port =
     ? process.env.PROD_PORT
     : process.env.DEV_PORT;
 
-//Import cors
-const cors = require("cors");
-app.use(cors());
+//Import projects data
 
-//Import bodyParser
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+let rawdata = fs.readFileSync("projects.json");
+let projects = JSON.parse(rawdata).projects;
 
-//Import axios
-const axios = require("axios");
-
-//Get github data
-//!Not returning data
-const githubData = async () => {
-  try {
-    const response = await axios({
-      method: "get",
-      url: `https://api.github.com/users/${process.env.GITHUB_USERNAME}/repos`,
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        "Content-Type": "application/json",
-        Accept: "application/vnd.github.mercy-preview+json", // MUST ADD TO INCLUDE TOPICS
-      },
-    });
-
-    if (response.status === 200) {
-      return response;
-    }
-    return false;
-  } catch (err) {
-    return err;
-  }
-};
+console.log(projects);
 
 //Set static file location
 app.use("/static", express.static(path.join(__dirname, "public")));
@@ -54,11 +29,9 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-//Display page at /
+//Display portfolio page at /
 app.get("/", (req, res) => {
-  console.log(githubData);
-
-  res.render("index");
+  res.render("index", { projects: projects });
 });
 
 //Make app live at port

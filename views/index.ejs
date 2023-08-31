@@ -103,76 +103,84 @@
 
       <!-- Projects container -->
       <div id="projects">
-        <!-- Year date -->
-        <h2>2022</h2>
 
-        <!-- Project section -->
-        <div>
-          <!-- Header and links for project -->
-          <section class="header">
-            <span></span>
-            <h4>Scams Site</h4>
-            <a href="https://rjdonnison.github.io/Scams/" target="_blank">
-              <svg>
-                <use xlink:href="/static/images/link.svg#link"></use>
-              </svg>
-            </a>
-            <a href="https://github.com/RJDonnison/Scams" target="_blank">
-              <svg>
-                <use xlink:href="/static/images/github.svg#github"></use>
-              </svg>
-            </a>
-          </section>
 
-          <!-- Project image -->
-          <img src="/static/images/scams.jpg" alt="Internet scams on a red background with a fishing hook.">
+        <!-- Loop through projects -->
+        <% let years=[]; projects.forEach(element=> { if(years.includes(element.year)){%>
+          <!-- Project section -->
+          <div>
+            <!-- Header and links for project -->
+            <section class="header">
+              <span></span>
+              <h4>
+                <%= element.name %>
+              </h4>
+              <a href="<%= element.project_link %>" target="_blank">
+                <svg>
+                  <use xlink:href="/static/images/link.svg#link"></use>
+                </svg>
+              </a>
+              <a href="<%= element.github_link %>" target="_blank">
+                <svg>
+                  <use xlink:href="/static/images/github.svg#github"></use>
+                </svg>
+              </a>
+            </section>
 
-          <!-- Project description -->
-          <p>
-            I created this website as a school project in 2022. The website is
-            for elderly people (70+) to identify internet scams and then avoid
-            them so they can be more confident online. It will be used when
-            elderly people want to enhance their technological confidence and
-            also when they are uncertain about potential internet scams.
-          </p>
-        </div>
+            <!-- Project image -->
+            <img src="<%= element.image %>" alt="<%= element.image.alt %>">
 
-        <!-- Project section -->
-        <div>
-          <!-- Header and links for project -->
-          <section class="header">
-            <span></span>
-            <h4>Travamigos</h4>
-            <a href="https://rjdonnison.github.io/Travamigos/" target="_blank">
-              <svg>
-                <use xlink:href="/static/images/link.svg#link"></use>
-              </svg>
-            </a>
-            <a href="https://github.com/RJDonnison/Travamigos" target="_blank">
-              <svg>
-                <use xlink:href="/static/images/github.svg#github"></use>
-              </svg>
-            </a>
-          </section>
+            <!-- Project description -->
+            <p>
+              <%- element.description %>
+            </p>
+          </div>
 
-          <!-- Project image -->
-          <img src="/static/images/travamigos.jpg" alt="A website with the words experience shared.">
+          <!-- Separate by year -->
+          <% }else{ years.push(element.year); %>
 
-          <!-- Project description -->
-          <p>
-            I created this website to enhance my css animation skills in 2022.
-            I also created this site to learn about javascript animation
-            integration. I based the design off the Travamigos website found
-            <a href="https://travamigos.com/">https://travamigos.com/</a> The
-            site is currently not responsive as that was not the intended
-            learning of the site.
-          </p>
-        </div>
+            <!-- Year date -->
+            <h2>
+              <%= element.year %>
+            </h2>
 
-        <!-- Year date -->
-        <h2>2023</h2>
+            <!-- Project section -->
+            <div>
+              <!-- Header and links for project -->
+              <section class="header">
+                <span></span>
+                <h4>
+                  <%= element.name %>
+                </h4>
+                <a href="<%= element.project_link %>" target="_blank">
+                  <svg>
+                    <use xlink:href="/static/images/link.svg#link"></use>
+                  </svg>
+                </a>
+                <a href="<%= element.github_link %>" target="_blank">
+                  <svg>
+                    <use xlink:href="/static/images/github.svg#github"></use>
+                  </svg>
+                </a>
+              </section>
 
-        <h3>To be continued...</h3>
+              <!-- Project image -->
+              <img src="<%= element.image %>" alt="<%= element.image.alt %>">
+
+              <!-- Project description -->
+              <p>
+                <%- element.description %>
+              </p>
+            </div>
+
+            <% }}); %>
+
+              <!-- Year date -->
+              <h2>
+                <%= parseInt(years[years.length-1]) + 1 %>
+              </h2>
+
+              <h3>To be continued...</h3>
       </div>
 
     </article>

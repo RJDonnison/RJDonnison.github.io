@@ -47,6 +47,8 @@ let projects = document.getElementById("projects");
 let width = -window.screen.width;
 for (const element of projects.children) width += element.offsetWidth;
 
+console.log(width);
+
 //Timeline horizontal scroll
 gsap.to("#projects", {
   x: `-${width}px`,

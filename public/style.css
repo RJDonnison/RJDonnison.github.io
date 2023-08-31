@@ -280,10 +280,15 @@ polygon {
   transform: rotateZ(-90deg);
 }
 
+/* Date and end text center */
+#timeline h2,
+h3 {
+  align-self: center;
+}
+
 /**Projects container */
 #projects {
   display: flex;
-  align-items: center;
 }
 
 #projects .header {
@@ -292,13 +297,14 @@ polygon {
 
 /**Project section */
 #projects div {
+  align-self: flex-start;
   min-width: 30vmax;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 5vh 2vw;
+  padding: 5vh 2vw;
 }
 
 /**Project image*/
@@ -307,10 +313,6 @@ polygon {
   width: 100%;
   border-radius: 50px;
   margin: 2vh 0;
-}
-
-#projects h3 {
-  padding-right: 5vw;
 }
 
 /*#endregion*/
