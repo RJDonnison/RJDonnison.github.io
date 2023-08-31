@@ -4,9 +4,9 @@
   "description": "",
   "author": "Reuben Donnison",
   "license": "ISC",
-  "source": "src/app.js",
+  "source": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

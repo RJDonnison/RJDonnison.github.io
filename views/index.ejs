@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Meta tags -->
+  <meta name="author" content="Reuben Donnison">
+  <meta name="description"
+    content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style.">
+  <meta name="keywords" content="website, portfolio, developer">
+
+  <!-- Import gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Link style and JS -->
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/gsap.js" type="module" defer></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+  <title>Reuben Donnison</title>
+</head>
+
+<body>
+  <!-- *Welcome header image and text -->
+  <header id="welcome-header">
+    <div>
+      <!-- Header sub text -->
+      <h3>I'm</h3>
+      <!-- Randomized header -->
+      <h1 data-value="Reuben">Reuben</h1>
+
+      <!-- Header sub text -->
+      <h3>
+        A junior <br>
+        web developer
+      </h3>
+
+      <!-- Scroll icon -->
+      <a href="#scroll" class="scroll-icon">
+        <svg>
+          <use xlink:href="/static/images/mouse.svg#mouse"></use>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Triangular bottom to header -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="edge">
+      <polygon class="border" points="50,80 50,77.5 100,0 100,2.5" />
+      <polygon points="50,100 50,80 100,2.5 100,100" />
+      <polygon class="border" points="50,80 50,77.5 0,0 0,2.5" />
+      <polygon points="0,2.5 50,80 50,100 0,100" />
+    </svg>
+  </header>
+
+  <!-- Main Content and scroll icon scroll position  -->
+  <main id="scroll">
+    <!-- About me article -->
+    <article id="about">
+      <div>
+        <!-- Header and links for about me -->
+        <section class="header">
+          <span></span>
+          <h4>About me</h4>
+          <a href="https://github.com/RJDonnison" target="_blank">
+            <svg>
+              <use xlink:href="/static/images/github.svg#github"></use>
+            </svg>
+          </a>
+        </section>
+
+        <!-- About me paragraph -->
+        <p>
+          Hello! I’m Reuben Donnison a student developer based in New Zealand.
+          I in year 13 attending Garin College in Nelson. My programming
+          journey started back in 2020 when I fell in love with creating
+          websites, since then I have been growing my web development skills.
+          However, I have also experimented with some game and app
+          development. I am currently working full-time in school to prepare
+          for university next year where I’m planning to take a course on
+          software development.
+          <br><br>
+          I dabble in photography some of which you can see here. I also love
+          music and play the drums and am learning the piano. I feel at home
+          on the water and windsurf whenever I can.
+        </p>
+      </div>
+
+      <!-- Image to left of paragraph -->
+      <img src="/static/images/about.jpg" alt="A person walking through a tunnel at night.">
+    </article>
+
+    <!-- Horizontal scroll timeline article  -->
+    <article id="timeline">
+      <!-- Timeline scroll progress bar -->
+      <progress value="0" max="100"></progress>
+
+      <!-- Projects container -->
+      <div id="projects">
+        <!-- Year date -->
+        <h2>2022</h2>
+
+        <!-- Project section -->
+        <div>
+          <!-- Header and links for project -->
+          <section class="header">
+            <span></span>
+            <h4>Scams Site</h4>
+            <a href="https://rjdonnison.github.io/Scams/" target="_blank">
+              <svg>
+                <use xlink:href="/static/images/link.svg#link"></use>
+              </svg>
+            </a>
+            <a href="https://github.com/RJDonnison/Scams" target="_blank">
+              <svg>
+                <use xlink:href="/static/images/github.svg#github"></use>
+              </svg>
+            </a>
+          </section>
+
+          <!-- Project image -->
+          <img src="/static/images/scams.jpg" alt="Internet scams on a red background with a fishing hook.">
+
+          <!-- Project description -->
+          <p>
+            I created this website as a school project in 2022. The website is
+            for elderly people (70+) to identify internet scams and then avoid
+            them so they can be more confident online. It will be used when
+            elderly people want to enhance their technological confidence and
+            also when they are uncertain about potential internet scams.
+          </p>
+        </div>
+
+        <!-- Project section -->
+        <div>
+          <!-- Header and links for project -->
+          <section class="header">
+            <span></span>
+            <h4>Travamigos</h4>
+            <a href="https://rjdonnison.github.io/Travamigos/" target="_blank">
+              <svg>
+                <use xlink:href="/static/images/link.svg#link"></use>
+              </svg>
+            </a>
+            <a href="https://github.com/RJDonnison/Travamigos" target="_blank">
+              <svg>
+                <use xlink:href="/static/images/github.svg#github"></use>
+              </svg>
+            </a>
+          </section>
+
+          <!-- Project image -->
+          <img src="/static/images/travamigos.jpg" alt="A website with the words experience shared.">
+
+          <!-- Project description -->
+          <p>
+            I created this website to enhance my css animation skills in 2022.
+            I also created this site to learn about javascript animation
+            integration. I based the design off the Travamigos website found
+            <a href="https://travamigos.com/">https://travamigos.com/</a> The
+            site is currently not responsive as that was not the intended
+            learning of the site.
+          </p>
+        </div>
+
+        <!-- Year date -->
+        <h2>2023</h2>
+
+        <h3>To be continued...</h3>
+      </div>
+
+    </article>
+
+    <!-- Footer with contact info -->
+    <footer>
+      <!-- Header for footer -->
+      <div>
+        <section class="header">
+          <span></span>
+          <h4>Get in touch</h4>
+        </section>
+
+        <!-- Footer text -->
+        <p>
+          Feel free to contact me about projects you would like to collaborate
+          on or to find out more about my projects.
+        </p>
+
+        <!-- Contact section -->
+        <div class="contact-stack">
+          <!-- Link to gmail -->
+          <a href="mailto:reujdon@gmail.com" target="_blank">
+            <svg>
+              <use xlink:href="/static/images/gmail.svg#gmail"></use>
+            </svg>
+            reujdon@gmail.com
+          </a>
+          <!-- Link to github -->
+          <a href="https://github.com/RJDonnison" target="_blank">
+            <svg>
+              <use xlink:href="/static/images/github.svg#github"></use>
+            </svg>
+            RJDonnison
+          </a>
+          <!-- Link to linkedin -->
+          <a href="#" target="_blank">
+            <svg>
+              <use xlink:href="/static/images/linkedin.svg#linkedin"></use>
+            </svg>
+            reujdon
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo to right -->
+      <div>
+        <!-- Photo source -->
+        <section class="header">
+          <span></span>
+          <h4>Photo by Reuben Donnison</h4>
+        </section>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
