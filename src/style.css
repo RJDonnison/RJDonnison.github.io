@@ -79,6 +79,11 @@ a {
   color: var(--second-text-color);
 }
 
+/**Changing underline color on hover */
+a:hover {
+  text-decoration-color: var(--main-text-color);
+}
+
 /**Main text styling*/
 p {
   font-family: Inter;
