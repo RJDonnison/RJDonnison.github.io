@@ -119,6 +119,7 @@ p {
 .header {
   display: flex;
   align-items: center;
+  font-size: 3vmax;
 }
 
 .header span {
@@ -128,9 +129,8 @@ p {
   background-color: var(--main-text-color);
 }
 
-.header > h4 {
+.header h4 {
   font-family: Ubuntu-Mono, monospace;
-  font-size: 3vmax;
   font-weight: bold;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -293,6 +293,7 @@ h3 {
 
 #projects .header {
   align-self: flex-start;
+  font-size: 2.5vmax;
 }
 
 /**Project section */

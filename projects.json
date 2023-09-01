@@ -17,6 +17,15 @@
       "image": "/static/images/travamigos.jpg",
       "image_alt": "A website with the words experience shared.",
       "description": "I created this website to enhance my css animation skills in 2022. I also created this site to learn about javascript animation integration. I based the design off the Travamigos website found <a href='https://travamigos.com/'>https://travamigos.com/</a> The site is currently not responsive as that was not the intended learning of the site."
+    },
+    {
+      "name": "Garin Website",
+      "year": "2023",
+      "github_link": "https://github.com/RJDonnison/Garin-Website",
+      "project_link": "http://intranet.garincollege.ac.nz/",
+      "image": "/static/images/garin.png",
+      "image_alt": "A screenshot of a school's website.",
+      "description": "I redesigned and developed the Garin College student homepage. To be usable on mobile devises and updated its aesthetics. "
     }
   ]
 }
