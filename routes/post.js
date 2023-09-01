@@ -63,7 +63,7 @@ router.post("/add-project", upload.single("image"), async (req, res, next) => {
 
       res.redirect("/");
     } else res.send("No file submitted");
-  } else res.send("Incorrect password");
+  } else res.redirect("/admin");
 });
 //#endregion
 
