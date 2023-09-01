@@ -1,15 +1,6 @@
 {
   "projects": [
     {
-      "name": "Travamigos",
-      "year": "2022",
-      "github_link": "https://github.com/RJDonnison/Travamigos",
-      "project_link": "https://rjdonnison.github.io/Travamigos/",
-      "image": "/static/images/travamigos.jpg",
-      "image_alt": "A website with the words experience shared.",
-      "description": "I created this website to enhance my css animation skills in 2022. I also created this site to learn about javascript animation integration. I based the design off the Travamigos website found <a href='https://travamigos.com/'>https://travamigos.com/</a> The site is currently not responsive as that was not the intended learning of the site."
-    },
-    {
       "name": "Scams Site",
       "year": "2022",
       "github_link": "https://github.com/RJDonnison/Scams",
@@ -17,6 +8,15 @@
       "image": "/static/images/scams.jpg",
       "image_alt": "Internet scams on a red background with a fishing hook.",
       "description": "I created this website as a school project in 2022. The website is for elderly people (70+) to identify internet scams and then avoid them so they can be more confident online. It will be used when elderly people want to enhance their technological confidence and also when they are uncertain about potential internet scams."
+    },
+    {
+      "name": "Travamigos",
+      "year": "2022",
+      "github_link": "https://github.com/RJDonnison/Travamigos",
+      "project_link": "https://rjdonnison.github.io/Travamigos/",
+      "image": "/static/images/travamigos.jpg",
+      "image_alt": "A website with the words experience shared.",
+      "description": "I created this website to enhance my css animation skills in 2022. I also created this site to learn about javascript animation integration. I based the design off the Travamigos website found <a href='https://travamigos.com/'>https://travamigos.com/</a> The site is currently not responsive as that was not the intended learning of the site."
     },
     {
       "name": "Garin Website",
