@@ -119,6 +119,7 @@ p {
 .header {
   display: flex;
   align-items: center;
+  font-size: 3vmax;
 }
 
 .header span {
@@ -130,7 +131,6 @@ p {
 
 .header > h4 {
   font-family: Ubuntu-Mono, monospace;
-  font-size: 3vmax;
   font-weight: bold;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -288,6 +288,7 @@ polygon {
 
 #projects .header {
   align-self: flex-start;
+  font-size: 2.5vmax;
 }
 
 /**Project section */
