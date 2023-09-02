@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="/static/adminStyle.css" />
 
     <title>Reuben Donnison - admin</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <form action="/add-project" method="post" enctype="multipart/form-data">
-        <input type="password" name="password" placeholder="password">
-        <input type="text" name="name" placeholder="name">
-        <input type="number" name="year" placeholder="year">
-        <input type="text" name="github_link" placeholder="github_link">
-        <input type="text" name="project_link" placeholder="project_link">
-        <input type="file" name="image" placeholder="image">
-        <input type="text" name="image_alt" placeholder="image_alt">
-        <input type="text" name="description" placeholder="description">
-        <button type="submit">Submit</button>
+      <input type="password" name="password" placeholder="password" />
+      <input type="text" name="name" placeholder="name" />
+      <input type="number" name="year" placeholder="year" />
+      <input type="text" name="github_link" placeholder="github_link" />
+      <input type="text" name="project_link" placeholder="project_link" />
+      <input type="file" name="image" placeholder="image" />
+      <input type="text" name="image_alt" placeholder="image_alt" />
+      <input type="text" name="description" placeholder="description" />
+      <input type="submit" value="Submit" />
     </form>
-</body>
-
+  </body>
 </html>
