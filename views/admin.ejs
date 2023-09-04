@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/static/adminStyle.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Reuben Donnison - admin</title>
-  </head>
+  <link rel="stylesheet" href="/static/adminStyle.css" />
 
-  <body>
-    <form action="/add-project" method="post" enctype="multipart/form-data">
-      <input type="password" name="password" placeholder="password" />
-      <input type="text" name="name" placeholder="name" />
-      <input type="number" name="year" placeholder="year" />
-      <input type="text" name="github_link" placeholder="github_link" />
-      <input type="text" name="project_link" placeholder="project_link" />
-      <input type="file" name="image" placeholder="image" />
-      <input type="text" name="image_alt" placeholder="image_alt" />
-      <input type="text" name="description" placeholder="description" />
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
+  <title>Reuben Donnison - admin</title>
+</head>
+
+<body>
+  <form action="/auth" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password" />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <!-- <form action="/add-project" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="name" />
+    <input type="number" name="year" placeholder="year" />
+    <input type="text" name="github_link" placeholder="github_link" />
+    <input type="text" name="project_link" placeholder="project_link" />
+    <input type="file" name="image" placeholder="image" />
+    <input type="text" name="image_alt" placeholder="image_alt" />
+    <input type="text" name="description" placeholder="description" />
+    <input type="submit" value="Submit" />
+  </form> -->
+</body>
+
 </html>

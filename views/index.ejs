@@ -34,12 +34,12 @@
       <!-- Header sub text -->
       <h3>I'm</h3>
       <!-- Randomized header -->
-      <h1 data-value="Reuben">Reuben</h1>
+      <h1 <%if(admin){%> contenteditable <%}%>>Reuben</h1>
 
       <!-- Header sub text -->
-      <h3>
-        A junior <br>
-        web developer
+      <h3 <%if(admin){%> contenteditable <%}%>>
+          A junior <br>
+          web developer
       </h3>
 
       <!-- Scroll icon -->
@@ -76,19 +76,19 @@
         </section>
 
         <!-- About me paragraph -->
-        <p>
-          Hello! I’m Reuben Donnison a student developer based in New Zealand.
-          I'm currently in year 13 attending Garin College in Nelson. My programming
-          journey started back in 2020 when I fell in love with creating
-          websites, since then I have been growing my web development skills.
-          However, I have also experimented with game and app
-          development. I am currently working full-time in school to prepare
-          for university next year where I’m planning to take a course in
-          software development.
-          <br><br>
-          I dabble in photography some of which you can see here. I also love
-          music and play the drums and am learning the piano. I feel at home
-          on the water and windsurf whenever I can.
+        <p <%if(admin){%> contenteditable <%}%>>
+            Hello! I’m Reuben Donnison a student developer based in New Zealand.
+            I'm currently in year 13 attending Garin College in Nelson. My programming
+            journey started back in 2020 when I fell in love with creating
+            websites, since then I have been growing my web development skills.
+            However, I have also experimented with game and app
+            development. I am currently working full-time in school to prepare
+            for university next year where I’m planning to take a course in
+            software development.
+            <br><br>
+            I dabble in photography some of which you can see here. I also love
+            music and play the drums and am learning the piano. I feel at home
+            on the water and windsurf whenever I can.
         </p>
       </div>
 
@@ -112,8 +112,8 @@
             <!-- Header and links for project -->
             <section class="header">
               <span></span>
-              <h4>
-                <%= element.name %>
+              <h4 <%if(admin){%> contenteditable <%}%>>
+                  <%= element.name %>
               </h4>
               <a href="<%= element.project_link %>" target="_blank">
                 <svg>
@@ -131,8 +131,8 @@
             <img src="<%= element.image %>" alt="<%= element.image.alt %>">
 
             <!-- Project description -->
-            <p>
-              <%- element.description %>
+            <p <%if(admin){%> contenteditable <%}%>>
+                <%- element.description %>
             </p>
           </div>
 
@@ -149,8 +149,8 @@
               <!-- Header and links for project -->
               <section class="header">
                 <span></span>
-                <h4>
-                  <%= element.name %>
+                <h4 <%if(admin){%> contenteditable <%}%>>
+                    <%= element.name %>
                 </h4>
                 <a href="<%= element.project_link %>" target="_blank">
                   <svg>
@@ -170,8 +170,8 @@
               </a>
 
               <!-- Project description -->
-              <p>
-                <%- element.description %>
+              <p <%if(admin){%> contenteditable <%}%>>
+                  <%- element.description %>
               </p>
             </div>
 
@@ -182,7 +182,7 @@
                 <%= parseInt(years[years.length-1]) + 1 %>
               </h2>
 
-              <h3>To be continued...</h3>
+              <h3 <%if(admin){%> contenteditable <%}%>>To be continued...</h3>
       </div>
 
     </article>
@@ -197,9 +197,9 @@
         </section>
 
         <!-- Footer text -->
-        <p>
-          Feel free to contact me about projects you would like to collaborate
-          on or to find out more about my projects.
+        <p <%if(admin){%> contenteditable <%}%>>
+            Feel free to contact me about projects you would like to collaborate
+            on or to find out more about my projects.
         </p>
 
         <!-- Contact section -->

@@ -9,16 +9,17 @@ require("dotenv").config();
 //Import express
 const express = require("express");
 const app = express();
+
+//Import session
+const session = require("express-session");
+
+//Import uuid
+const { v4: uuidv4 } = require("uuid");
 //#endregion
 
 //*Setup middleware
 //#region
 //Specify port
-const port =
-  process.env.STATUS === "production"
-    ? process.env.PROD_PORT
-    : process.env.DEV_PORT;
-
 //Json setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +30,27 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 //Set view file location and type
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+//Session setup
+app.use(
+  session({
+    name: "SessionId",
+    genid: function (req) {
+      console.log("session id created");
+      return uuidv4();
+    },
+    secret: "Shsh!Secret!",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false, expires: 60000 },
+  })
+);
+
+const port =
+  process.env.STATUS === "production"
+    ? process.env.PROD_PORT
+    : process.env.DEV_PORT;
+
 //#endregion
 
 //*Route implementation

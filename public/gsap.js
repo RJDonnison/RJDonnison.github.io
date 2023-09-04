@@ -8,6 +8,9 @@ let interval = null;
 //Get target element
 let target = document.querySelector("h1");
 
+//Set target to default value
+target.dataset.value = target.innerHTML;
+
 //Set -ve interval to randomize first letters of text
 let iteration = -2;
 
