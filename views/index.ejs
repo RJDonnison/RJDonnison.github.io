@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark light">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
 
   <!-- Meta tags -->
-  <meta name="author" content="Reuben Donnison">
+  <meta name="author" content="Reuben Donnison" />
   <meta name="description"
-    content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style.">
-  <meta name="keywords" content="website, portfolio, developer, Reuben Donnison">
+    content="Explore a portfolio website showcasing the creative journey of Reuben Donnison. Discover an array of exceptional projects, and unique talents that define a distinctive creative style." />
+  <meta name="keywords" content="website, portfolio, developer, Reuben Donnison" />
 
   <!-- Import gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <!-- Link style and JS -->
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/style.css" />
   <script src="/static/gsap.js" type="module" defer></script>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
 
   <title>Reuben Donnison</title>
 </head>
@@ -32,15 +32,13 @@
   <header id="welcome-header">
     <div>
       <!-- Header sub text -->
-      <h3>I'm</h3>
+      <h3 id="save">I'm</h3>
       <!-- Randomized header -->
-      <h1 <%if(admin){%> contenteditable <%}%>>Reuben</h1>
+      <h1 <%if(admin){%>contenteditable <%}%>><%= header %>
+      </h1>
 
       <!-- Header sub text -->
-      <h3 <%if(admin){%> contenteditable <%}%>>
-          A junior <br>
-          web developer
-      </h3>
+      <h3 <%if(admin){%>contenteditable <%}%>> <%- headerSub %></h3>
 
       <!-- Scroll icon -->
       <a href="#scroll" class="scroll-icon">
@@ -76,24 +74,11 @@
         </section>
 
         <!-- About me paragraph -->
-        <p <%if(admin){%> contenteditable <%}%>>
-            Hello! I’m Reuben Donnison a student developer based in New Zealand.
-            I'm currently in year 13 attending Garin College in Nelson. My programming
-            journey started back in 2020 when I fell in love with creating
-            websites, since then I have been growing my web development skills.
-            However, I have also experimented with game and app
-            development. I am currently working full-time in school to prepare
-            for university next year where I’m planning to take a course in
-            software development.
-            <br><br>
-            I dabble in photography some of which you can see here. I also love
-            music and play the drums and am learning the piano. I feel at home
-            on the water and windsurf whenever I can.
-        </p>
+        <p <%if(admin){%>contenteditable <%}%>> <%- about %></p>
       </div>
 
       <!-- Image to left of paragraph -->
-      <img src="/static/images/about.jpg" alt="A person walking through a tunnel at night.">
+      <img src="/static/images/about.jpg" alt="A person walking through a tunnel at night." />
     </article>
 
     <!-- Horizontal scroll timeline article  -->
@@ -103,17 +88,15 @@
 
       <!-- Projects container -->
       <div id="projects">
-
-
         <!-- Loop through projects -->
-        <% let years=[]; projects.forEach(element=> { if(years.includes(element.year)){%>
-          <!-- Project section -->
+        <% let years=[]; projects.forEach(element=> {
+          if(years.includes(element.year)){%>
+          <!--* Project section -->
           <div>
-            <!-- Header and links for project -->
+            <!--* Header and links for project -->
             <section class="header">
               <span></span>
-              <h4 <%if(admin){%> contenteditable <%}%>>
-                  <%= element.name %>
+              <h4 <%if(admin){%>contenteditable <%}%>> <%= element.name %>
               </h4>
               <a href="<%= element.project_link %>" target="_blank">
                 <svg>
@@ -127,30 +110,27 @@
               </a>
             </section>
 
-            <!-- Project image -->
-            <img src="<%= element.image %>" alt="<%= element.image.alt %>">
+            <!--* Project image -->
+            <img src="<%= element.image %>" alt="<%= element.image.alt %>" />
 
-            <!-- Project description -->
-            <p <%if(admin){%> contenteditable <%}%>>
-                <%- element.description %>
-            </p>
+            <!--* Project description -->
+            <p <%if(admin){%> contenteditable <%}%>> <%- element.description %> </p>
           </div>
 
-          <!-- Separate by year -->
+          <!--* Separate by year -->
           <% }else{ years.push(element.year); %>
 
-            <!-- Year date -->
+            <!--* Year date -->
             <h2>
               <%= element.year %>
             </h2>
 
-            <!-- Project section -->
+            <!--* Project section -->
             <div>
-              <!-- Header and links for project -->
+              <!--* Header and links for project -->
               <section class="header">
                 <span></span>
-                <h4 <%if(admin){%> contenteditable <%}%>>
-                    <%= element.name %>
+                <h4 <%if(admin){%>contenteditable <%}%>> <%= element.name %>
                 </h4>
                 <a href="<%= element.project_link %>" target="_blank">
                   <svg>
@@ -164,27 +144,40 @@
                 </a>
               </section>
 
-              <!-- Project image -->
+              <!--* Project image -->
               <a href="<%= element.project_link %>" target="_blank">
-                <img src="<%= element.image %>" alt="<%= element.image.alt %>">
+                <img src="<%= element.image %>" "<%= element.image.alt %>" />
               </a>
 
-              <!-- Project description -->
-              <p <%if(admin){%> contenteditable <%}%>>
-                  <%- element.description %>
-              </p>
+              <!--* Project description -->
+              <p <%if(admin){%> contenteditable <%}%>> <%- element.description %> </p>
             </div>
 
             <% }}); %>
 
-              <!-- Year date -->
+              <!--* Year date -->
               <h2>
                 <%= parseInt(years[years.length-1]) + 1 %>
               </h2>
 
-              <h3 <%if(admin){%> contenteditable <%}%>>To be continued...</h3>
-      </div>
+              <!--* Display add project form -->
+              <%if(admin){%>
+                <div>
+                  <form action="/add-project" method="post" enctype="multipart/form-data">
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="number" name="year" placeholder="Year" />
+                    <input type="text" name="github_link" placeholder="Github_link" />
+                    <input type="text" name="project_link" placeholder="Project_link" />
+                    <input type="file" name="image" placeholder="Image" />
+                    <input type="text" name="image_alt" placeholder="Image_alt" />
+                    <input type="text" name="description" placeholder="Description" />
+                    <input type="submit" value="Submit" />
+                  </form>
+                </div>
+                <%}%>
 
+                  <h3 <%if(admin){%>contenteditable <%}%>><%- projectsEnd %></h3>
+      </div>
     </article>
 
     <!-- Footer with contact info -->
@@ -197,10 +190,7 @@
         </section>
 
         <!-- Footer text -->
-        <p <%if(admin){%> contenteditable <%}%>>
-            Feel free to contact me about projects you would like to collaborate
-            on or to find out more about my projects.
-        </p>
+        <p <%if(admin){%>contenteditable <%}%>> <%- contact %></p>
 
         <!-- Contact section -->
         <div class="contact-stack">

@@ -50,8 +50,6 @@ let projects = document.getElementById("projects");
 let width = -window.screen.width;
 for (const element of projects.children) width += element.offsetWidth;
 
-console.log(width);
-
 //Timeline horizontal scroll
 gsap.to("#projects", {
   x: `-${width}px`,
@@ -90,4 +88,27 @@ gsap.to("footer", {
   },
   ease: "none",
 });
+//#endregion
+
+//*Make post request on save
+//#region
+
+document.getElementById("save").addEventListener("click", () => {
+  console.log("click");
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/save", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(
+    JSON.stringify({
+      header: document.querySelector("#welcome-header h1").innerHTML.slice(1),
+      headerSub: document
+        .querySelector("#welcome-header h3:last-of-type")
+        .innerHTML.slice(1),
+      about: document.querySelector("#about p").innerHTML.slice(1),
+      projectsEnd: document.querySelector("#projects h3").innerHTML,
+      contact: document.querySelector("footer p").innerHTML.slice(1),
+    })
+  );
+});
+
 //#endregion

@@ -29,8 +29,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 //#endregion
 
-//*Add project post
-//#region
 //Authenticate admin
 router.post("/auth", upload.single(), async (req, res) => {
   //Check password
@@ -43,8 +41,26 @@ router.post("/auth", upload.single(), async (req, res) => {
   } else return res.redirect("/admin");
 });
 
-router.post("/save", upload.single(), async (req, res) => {});
+//Save edited content
+router.post("/save", upload.single(), async (req, res) => {
+  //Read webpage data
+  let webData = JSON.parse(fs.readFileSync("data.json"));
 
+  console.log(req.body);
+  webData.header = req.body.header;
+  webData.headerSub = req.body.headerSub;
+  webData.about = req.body.about;
+  webData.projectsEnd = req.body.projectsEnd;
+  webData.contact = req.body.contact;
+
+  //Webpage data to JSON
+  let data = JSON.stringify(webData);
+  fs.writeFileSync("data.json", data);
+
+  res.redirect("/");
+});
+
+//Add project to list
 router.post("/add-project", upload.single("image"), async (req, res) => {
   //Check file submitted
   if (req.file != null) {
@@ -60,17 +76,17 @@ router.post("/add-project", upload.single("image"), async (req, res) => {
     };
 
     //Read projects data
-    let rawdata = fs.readFileSync("data.json");
-    let projects = JSON.parse(rawdata);
+    let webData = JSON.parse(fs.readFileSync("data.json"));
+    let projects = webData.projects;
 
     //Add new project to array
-    projects.projects.push(project);
+    projects.push(project);
 
     //Sort projects array
-    projects.projects.sort((a, b) => (a.year > b.year ? 1 : -1));
+    projects.sort((a, b) => (a.year > b.year ? 1 : -1));
 
     //Projects data to JSON
-    let data = JSON.stringify(projects);
+    let data = JSON.stringify(webData);
     fs.writeFileSync("data.json", data);
 
     res.redirect("/");

@@ -316,6 +316,42 @@ h3 {
   margin: 2vh 0;
 }
 
+/**Admin add project form*/
+/*#region*/
+/* Input styles */
+input,
+select {
+  font-size: 1vmax;
+  width: 100%;
+  padding: 0.9vw 1vw;
+  margin: 0.5vw 0;
+  background-color: var(--second-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  border-radius: 10px;
+}
+
+/* Outline on focus/click */
+input:focus {
+  outline: 2.5px solid var(--highlight-color);
+}
+
+/* Submit  */
+input[type=submit] {
+  background-color: var(--highlight-color);
+  cursor: pointer;
+}
+
+input[type=submit]:focus{
+  outline: none;
+}
+
+input[type=submit]:hover {
+  background-color: var(--second-bg-color);
+  border: 2.5px solid var(--highlight-color);
+}
+/*#endregion*/
+
 /*#endregion*/
 
 /**Footer*/

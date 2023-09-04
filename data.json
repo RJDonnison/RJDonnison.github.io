@@ -1,14 +1,8 @@
 {
+  "header": "Reuben",
+  "headerSub": "A junior <br> web developer",
+  "about": "Hello! I’m Reuben Donnison a student developer based in New Zealand. I'm currently in year 13 attending Garin College in Nelson. My programming journey started back in 2020 when I fell in love with creating websites, since then I have been growing my web development skills. However, I have also experimented with game and app development. I am currently working full-time in school to prepare for university next year where I’m planning to take a course in software development. <br><br> I dabble in photography some of which you can see here. I also love music and play the drums and am learning the piano. I feel at home on the water and windsurf whenever I can.",
   "projects": [
-    {
-      "name": "Travamigos",
-      "year": "2022",
-      "github_link": "https://github.com/RJDonnison/Travamigos",
-      "project_link": "https://rjdonnison.github.io/Travamigos/",
-      "image": "/static/images/travamigos.jpg",
-      "image_alt": "A website with the words experience shared.",
-      "description": "I created this website to enhance my css animation skills in 2022. I also created this site to learn about javascript animation integration. I based the design off the Travamigos website found <a href='https://travamigos.com/'>https://travamigos.com/</a> The site is currently not responsive as that was not the intended learning of the site."
-    },
     {
       "name": "Scams Site",
       "year": "2022",
@@ -19,6 +13,15 @@
       "description": "I created this website as a school project in 2022. The website is for elderly people (70+) to identify internet scams and then avoid them so they can be more confident online. It will be used when elderly people want to enhance their technological confidence and also when they are uncertain about potential internet scams."
     },
     {
+      "name": "Travamigos",
+      "year": "2022",
+      "github_link": "https://github.com/RJDonnison/Travamigos",
+      "project_link": "https://rjdonnison.github.io/Travamigos/",
+      "image": "/static/images/travamigos.jpg",
+      "image_alt": "A website with the words experience shared.",
+      "description": "I created this website to enhance my css animation skills in 2022. I also created this site to learn about javascript animation integration. I based the design off the Travamigos website found <a href='https://travamigos.com/'>https://travamigos.com/</a> The site is currently not responsive as that was not the intended learning of the site."
+    },
+    {
       "name": "Garin Website",
       "year": "2023",
       "github_link": "https://github.com/RJDonnison/Garin-Website",
@@ -27,5 +30,7 @@
       "image_alt": "A screenshot of a school's website.",
       "description": "I redesigned and developed the Garin College student homepage. To be usable on mobile devices and updated its aesthetics. "
     }
-  ]
+  ],
+  "projectsEnd": "To be continued...",
+  "contact": "Feel free to contact me about projects you would like to collaborate on or to find out more about my projects."
 }
