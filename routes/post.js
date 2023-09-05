@@ -52,8 +52,8 @@ router.post("/save", upload.single(), (req, res) => {
   webData.projectsEnd = req.body.projectsEnd;
   webData.contact = req.body.contact;
 
+  //Assign correct new values to existing projects
   let i = 0;
-
   webData.projects.forEach((element) => {
     element.name = req.body.projectsTitles[i];
     element.description = req.body.projectsDescriptions[i];
