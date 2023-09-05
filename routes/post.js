@@ -42,22 +42,29 @@ router.post("/auth", upload.single(), async (req, res) => {
 });
 
 //Save edited content
-router.post("/save", upload.single(), async (req, res) => {
+router.post("/save", upload.single(), (req, res) => {
   //Read webpage data
   let webData = JSON.parse(fs.readFileSync("data.json"));
 
-  console.log(req.body);
   webData.header = req.body.header;
   webData.headerSub = req.body.headerSub;
   webData.about = req.body.about;
   webData.projectsEnd = req.body.projectsEnd;
   webData.contact = req.body.contact;
 
+  let i = 0;
+
+  webData.projects.forEach((element) => {
+    element.name = req.body.projectsTitles[i];
+    element.description = req.body.projectsDescriptions[i];
+    i++;
+  });
+
   //Webpage data to JSON
   let data = JSON.stringify(webData);
   fs.writeFileSync("data.json", data);
 
-  res.redirect("/");
+  req.session.username = null;
 });
 
 //Add project to list

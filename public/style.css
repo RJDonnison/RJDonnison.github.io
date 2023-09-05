@@ -320,7 +320,8 @@ h3 {
 /*#region*/
 /* Input styles */
 input,
-select {
+select,
+button {
   font-size: 1vmax;
   width: 100%;
   padding: 0.9vw 1vw;
@@ -329,25 +330,25 @@ select {
   color: var(--main-text-color);
   border: none;
   border-radius: 10px;
+  outline: 2.5px solid var(--highlight-color);
 }
 
 /* Outline on focus/click */
 input:focus {
-  outline: 2.5px solid var(--highlight-color);
+  background-color: var(--main-bg-color);
 }
 
 /* Submit  */
-input[type=submit] {
+button,
+input[type="submit"] {
   background-color: var(--highlight-color);
   cursor: pointer;
-}
-
-input[type=submit]:focus{
   outline: none;
 }
 
-input[type=submit]:hover {
-  background-color: var(--second-bg-color);
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--main-bg-color);
   border: 2.5px solid var(--highlight-color);
 }
 /*#endregion*/
