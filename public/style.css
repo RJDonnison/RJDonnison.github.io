@@ -23,6 +23,7 @@
   --highlight-color: #e76f51;
   --main-text-color: #fff;
   --second-text-color: #8f8f8f;
+  --text-multiplier: 1;
 }
 
 /**Setup*/
@@ -59,7 +60,7 @@ article:nth-child(even) {
 h1,
 h2 {
   font-family: Ubuntu-Mono, monospace;
-  font-size: 13vmax;
+  font-size: calc(13vmax * var(--text-multiplier));
   font-weight: bold;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -68,7 +69,7 @@ h2 {
 /**Sub text styling*/
 h3 {
   font-family: Inter, monospace;
-  font-size: 2vmax;
+  font-size: calc(2vmax * var(--text-multiplier));
   font-weight: lighter;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -87,7 +88,7 @@ a:hover {
 /**Main text styling*/
 p {
   font-family: Inter;
-  font-size: 1.5vmax;
+  font-size: calc(1.5vmax * var(--text-multiplier));
   color: var(--second-text-color);
 }
 /*#endregion*/
@@ -119,7 +120,7 @@ p {
 .header {
   display: flex;
   align-items: center;
-  font-size: 3vmax;
+  font-size: calc(3vmax * var(--text-multiplier));
 }
 
 .header span {
@@ -239,6 +240,7 @@ polygon {
 /**Portrait*/
 #about > img {
   height: 100%;
+  max-height: 650px;
   width: auto;
   aspect-ratio: 10/14;
   border-radius: 50px;
@@ -275,7 +277,7 @@ polygon {
 
 /**Timeline date text*/
 #timeline h2 {
-  font-size: 20vmax;
+  font-size: calc(20vmax * var(--text-multiplier));
   text-align: center;
   transform: rotateZ(-90deg);
 }
@@ -322,7 +324,7 @@ h3 {
 input,
 select,
 button {
-  font-size: 1vmax;
+  font-size: calc(1vmax * var(--text-multiplier));
   width: 100%;
   padding: 0.9vw 1vw;
   margin: 0.5vw 0;
@@ -388,20 +390,19 @@ footer .contact-stack > a {
   fill: var(--main-text-color);
 
   display: flex;
-  width: 410px;
   align-items: center;
 
   font-family: Inter;
-  font-size: 1.5vw;
+  font-size: calc(1.5vmax * var(--text-multiplier));
   text-decoration: none;
   text-align: center;
 }
 
 /**Footer link svg*/
 footer .contact-stack > a svg {
-  width: 3vw;
-  height: 3vw;
-  margin-right: 3vw;
+  width: 3vmax;
+  height: 3vmax;
+  margin-right: 3vmax;
 }
 
 /**Links hover */
@@ -426,7 +427,7 @@ footer > :last-child {
 }
 
 footer > :last-child h4 {
-  font-size: 1vw;
+  font-size: calc(1vw * var(--text-multiplier));
 }
 /*#endregion*/
 
@@ -439,6 +440,60 @@ footer > :last-child h4 {
     --highlight-color: #2a9d8f;
     --main-text-color: #000;
     --second-text-color: #000;
+  }
+}
+/*#endregion*/
+
+/**Responsive*/
+/*#region*/
+@media only screen and (max-width: 900px) {
+  /**Scroll icon*/
+  .scroll-icon {
+    height: 8vmax;
+    width: 8vmax;
+  }
+
+  /**About*/
+  #about {
+    height: fit-content;
+  }
+
+  /*Text*/
+  #about > div {
+    width: 92vw;
+  }
+
+  /*Portrait*/
+  #about > img {
+    display: none;
+  }
+
+  /**Project image*/
+  #projects div img {
+    border-radius: 10px;
+  }
+
+  /**Footer*/
+  /* Background image */
+  footer {
+    aspect-ratio: 17/10;
+    background-image: url(images/footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: rgba(37, 41, 41, 0.8);
+    background-blend-mode: multiply;
+  }
+
+  /* Contact div */
+  footer > div {
+    width: 80%;
+  }
+
+  /* Remove side image */
+  footer > :last-child {
+    display: none;
   }
 }
 /*#endregion*/
