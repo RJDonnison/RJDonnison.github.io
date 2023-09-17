@@ -13,6 +13,9 @@ router.get("/", (req, res) => {
   //Check username
   if (req.session.username == process.env.NAME) admin = true;
 
+  //Logout
+  req.session.username = null;
+
   //Read projects data
   let webData = JSON.parse(fs.readFileSync("data.json"));
 

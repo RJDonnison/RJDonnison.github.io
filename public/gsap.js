@@ -124,8 +124,6 @@ document.getElementById("save").addEventListener("click", () => {
       contact: document.querySelector("footer p").innerHTML.slice(1),
     })
   );
-
-  window.location.href = "/";
 });
 
 //#endregion

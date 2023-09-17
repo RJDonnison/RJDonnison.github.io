@@ -31,6 +31,9 @@ const upload = multer({ storage: storage });
 
 //Authenticate admin
 router.post("/auth", upload.single(), async (req, res) => {
+  const salt = await bcrypt.genSalt(6);
+  console.log(await bcrypt.hash(req.body.password, salt));
+
   //Check password
   if (req.body.password == null) return res.send("No password");
   if (await bcrypt.compare(req.body.password, process.env.PASSWORD)) {
@@ -63,8 +66,6 @@ router.post("/save", upload.single(), (req, res) => {
   //Webpage data to JSON
   let data = JSON.stringify(webData);
   fs.writeFileSync("data.json", data);
-
-  req.session.username = null;
 });
 
 //Add project to list
