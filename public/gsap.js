@@ -56,7 +56,7 @@ gsap.to("#projects", {
   scrollTrigger: {
     trigger: timeline,
     start: `start end`,
-    end: () => `+=${timeline.offsetWidth}`,
+    end: () => `+=${width}`,
     pin: true,
     pinSpacing: false,
     scrub: true,
@@ -70,7 +70,7 @@ gsap.to("#timeline progress", {
   scrollTrigger: {
     trigger: timeline,
     start: `start end`,
-    end: () => `+=${timeline.offsetWidth}`,
+    end: () => `+=${width}`,
     scrub: true,
   },
   ease: "none",
@@ -78,11 +78,11 @@ gsap.to("#timeline progress", {
 
 //Keep footer at bottom of timeline
 gsap.to("footer", {
-  y: `${timeline.offsetWidth}px`,
+  y: `${width}px`,
   scrollTrigger: {
     trigger: timeline,
     start: `start end`,
-    end: () => `+=${timeline.offsetWidth}`,
+    end: () => `+=${width}`,
     scrub: true,
   },
   ease: "none",
