@@ -23,7 +23,6 @@
   --highlight-color: #e76f51;
   --main-text-color: #fff;
   --second-text-color: #8f8f8f;
-  --text-multiplier: 1;
 }
 
 /**Setup*/
@@ -60,7 +59,7 @@ article:nth-child(even) {
 h1,
 h2 {
   font-family: Ubuntu-Mono, monospace;
-  font-size: calc(13vmax * var(--text-multiplier));
+  font-size: 13vmax;
   font-weight: bold;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -69,7 +68,7 @@ h2 {
 /**Sub text styling*/
 h3 {
   font-family: Inter, monospace;
-  font-size: calc(2vmax * var(--text-multiplier));
+  font-size: 2vmax;
   font-weight: lighter;
   color: var(--main-text-color);
   text-transform: uppercase;
@@ -88,7 +87,7 @@ a:hover {
 /**Main text styling*/
 p {
   font-family: Inter;
-  font-size: calc(1.5vmax * var(--text-multiplier));
+  font-size: 1.5vmax;
   color: var(--second-text-color);
 }
 /*#endregion*/
@@ -120,7 +119,7 @@ p {
 .header {
   display: flex;
   align-items: center;
-  font-size: calc(3vmax * var(--text-multiplier));
+  font-size: 3vmax;
 }
 
 .header span {
@@ -277,8 +276,9 @@ polygon {
 
 /**Timeline date text*/
 #timeline h2 {
-  font-size: calc(20vmax * var(--text-multiplier));
-  text-align: center;
+  font-size: 20vmax;
+  text-align: start;
+  align-self: center;
   transform: rotateZ(-90deg);
 }
 
@@ -324,7 +324,7 @@ h3 {
 input,
 select,
 button {
-  font-size: calc(1vmax * var(--text-multiplier));
+  font-size: 1vmax;
   width: 100%;
   padding: 0.9vw 1vw;
   margin: 0.5vw 0;
@@ -393,7 +393,7 @@ footer .contact-stack > a {
   align-items: center;
 
   font-family: Inter;
-  font-size: calc(1.5vmax * var(--text-multiplier));
+  font-size: 1.5vmax;
   text-decoration: none;
   text-align: center;
 }
@@ -427,7 +427,7 @@ footer > :last-child {
 }
 
 footer > :last-child h4 {
-  font-size: calc(1vw * var(--text-multiplier));
+  font-size: 1vmax;
 }
 /*#endregion*/
 

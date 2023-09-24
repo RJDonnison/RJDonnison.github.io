@@ -47,7 +47,7 @@ let timeline = document.getElementById("timeline");
 
 //Set width of projects by adding element sizes
 let projectsDiv = document.getElementById("projects");
-let width = -window.screen.width;
+let width = -timeline.offsetWidth;
 for (const element of projectsDiv.children) width += element.offsetWidth;
 
 //Timeline horizontal scroll
@@ -78,12 +78,11 @@ gsap.to("#timeline progress", {
 
 //Keep footer at bottom of timeline
 gsap.to("footer", {
-  y: timeline.offsetWidth,
+  y: `${timeline.offsetWidth}px`,
   scrollTrigger: {
     trigger: timeline,
     start: `start end`,
     end: () => `+=${timeline.offsetWidth}`,
-    pinSpacing: false,
     scrub: true,
   },
   ease: "none",
