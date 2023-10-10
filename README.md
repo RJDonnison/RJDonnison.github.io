@@ -13,3 +13,8 @@ Run command below to host the site locally
 ```npm
 npm start
 ```
+
+## TODO
+
+- [ ] Fix timeline jumping
+- [ ] Fix local host not getting svgs
