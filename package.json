@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RJDonnison/PortfolioSite.git"
+    "url": "git+https://github.com/RJDonnison/RJDonnison.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/RJDonnison/PortfolioSite/issues"
+    "url": "https://github.com/RJDonnison//RJDonnison.github.io/issues"
   },
-  "homepage": "https://github.com/RJDonnison/PortfolioSite",
+  "homepage": "https://github.com/RJDonnison/RJDonnison.github.io",
   "devDependencies": {
     "mkdirp": "^3.0.1",
     "rimraf": "^5.0.1"
